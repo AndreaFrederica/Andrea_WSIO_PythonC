@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 # BanList
 banlist/
 
 
 
+=======
+>>>>>>> 5879dc6a0bd88bcf5faf4ff749810aacbc6dcad1
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -140,4 +143,8 @@ dmypy.json
 .pytype/
 
 # Cython debug symbols
+<<<<<<< HEAD
 cython_debug/
+=======
+cython_debug/
+>>>>>>> 5879dc6a0bd88bcf5faf4ff749810aacbc6dcad1
