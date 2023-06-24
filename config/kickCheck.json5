@@ -1,0 +1,8 @@
+{
+        //* PlugName: kickCheck
+        enable_ip:false,                 //! 启用ip识别
+        enable_name:true,                //* 启用名字识别
+        enable_uuid:true,                //* 启用UUID识别
+        //? FullSearch
+        enable_full_search:false         //! 启用全索检  切勿启用 可能会导致bug
+}

@@ -1,0 +1,439 @@
+[
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "module",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "module",
+        "description": "module",
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "tools",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "context",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "tools",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "configIO",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "context",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "context",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "config",
+        "description": "config",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "initRegister",
+        "importPath": "module.router",
+        "description": "module.router",
+        "isExtraImport": true,
+        "detail": "module.router",
+        "documentation": {}
+    },
+    {
+        "label": "routeRegister",
+        "importPath": "module.router",
+        "description": "module.router",
+        "isExtraImport": true,
+        "detail": "module.router",
+        "documentation": {}
+    },
+    {
+        "label": "initRegister",
+        "importPath": "module.router",
+        "description": "module.router",
+        "isExtraImport": true,
+        "detail": "module.router",
+        "documentation": {}
+    },
+    {
+        "label": "pyjson5",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyjson5",
+        "description": "pyjson5",
+        "detail": "pyjson5",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "functools",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "functools",
+        "description": "functools",
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "wraps",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "import_module",
+        "importPath": "importlib",
+        "description": "importlib",
+        "isExtraImport": true,
+        "detail": "importlib",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "inspect",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "inspect",
+        "description": "inspect",
+        "detail": "inspect",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "websockets",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "websockets",
+        "description": "websockets",
+        "detail": "websockets",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "kind": 6,
+        "importPath": "module.configIO",
+        "description": "module.configIO",
+        "peekOfCode": "class Config():\n    global path\n    def __init__(self, name:str) -> None:\n        global path\n        self.config:dict = dict()\n        self.config_path = f\"{path}/{name}.json5\"\n        if(os.path.exists(self.config_path)):\n            self.read()\n        pass\n    def __getConfigFileObj(self, mode:str) -> object:",
+        "detail": "module.configIO",
+        "documentation": {}
+    },
+    {
+        "label": "init",
+        "kind": 2,
+        "importPath": "module.configIO",
+        "description": "module.configIO",
+        "peekOfCode": "def init():\n    global path\n    if(not os.path.exists(path)):\n        os.mkdir(path)\nclass Config():\n    global path\n    def __init__(self, name:str) -> None:\n        global path\n        self.config:dict = dict()\n        self.config_path = f\"{path}/{name}.json5\"",
+        "detail": "module.configIO",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "kind": 5,
+        "importPath": "module.configIO",
+        "description": "module.configIO",
+        "peekOfCode": "path = \"config\"\n#* End Config\n@initRegister\ndef init():\n    global path\n    if(not os.path.exists(path)):\n        os.mkdir(path)\nclass Config():\n    global path\n    def __init__(self, name:str) -> None:",
+        "detail": "module.configIO",
+        "documentation": {}
+    },
+    {
+        "label": "context",
+        "kind": 5,
+        "importPath": "module.context",
+        "description": "module.context",
+        "peekOfCode": "context = None\nroute_func_list:list = list()\nroutes:dict = dict()\nmodules:dict = dict()\nroute2module:dict() = dict()                #! 路由转模块名",
+        "detail": "module.context",
+        "documentation": {}
+    },
+    {
+        "label": "route_func_list:list",
+        "kind": 5,
+        "importPath": "module.context",
+        "description": "module.context",
+        "peekOfCode": "route_func_list:list = list()\nroutes:dict = dict()\nmodules:dict = dict()\nroute2module:dict() = dict()                #! 路由转模块名",
+        "detail": "module.context",
+        "documentation": {}
+    },
+    {
+        "label": "routes:dict",
+        "kind": 5,
+        "importPath": "module.context",
+        "description": "module.context",
+        "peekOfCode": "routes:dict = dict()\nmodules:dict = dict()\nroute2module:dict() = dict()                #! 路由转模块名",
+        "detail": "module.context",
+        "documentation": {}
+    },
+    {
+        "label": "modules:dict",
+        "kind": 5,
+        "importPath": "module.context",
+        "description": "module.context",
+        "peekOfCode": "modules:dict = dict()\nroute2module:dict() = dict()                #! 路由转模块名",
+        "detail": "module.context",
+        "documentation": {}
+    },
+    {
+        "label": "route2module:dict()",
+        "kind": 5,
+        "importPath": "module.context",
+        "description": "module.context",
+        "peekOfCode": "route2module:dict() = dict()                #! 路由转模块名",
+        "detail": "module.context",
+        "documentation": {}
+    },
+    {
+        "label": "routeRegister",
+        "kind": 2,
+        "importPath": "module.router",
+        "description": "module.router",
+        "peekOfCode": "def routeRegister(route:str):\n    def inner_routeRegister(func):\n        if(not(route in context.routes.keys())):\n            #! 第一次加载时注册路由\n            context.route_func_list.append(func.__name__)\n            context.routes.update({f\"{route}\":f\"{func.__name__}\"})\n            context.route2module.update({f\"{route}\":f\"{tools.getModuleNameFromFunc(func)}\"})\n            @wraps(func)\n            def wrap(*args, **kwargs):\n                return func(*args, **kwargs)",
+        "detail": "module.router",
+        "documentation": {}
+    },
+    {
+        "label": "initRegister",
+        "kind": 2,
+        "importPath": "module.router",
+        "description": "module.router",
+        "peekOfCode": "def initRegister(func):\n    #print(\"after\")\n    @wraps(func)\n    def warp():\n        return func\n    func()\n    # do init\n    #print(\"before\")\n    return warp\ndef load_modules():",
+        "detail": "module.router",
+        "documentation": {}
+    },
+    {
+        "label": "load_modules",
+        "kind": 2,
+        "importPath": "module.router",
+        "description": "module.router",
+        "peekOfCode": "def load_modules():\n    for module_name in config.modules:\n        # module_name = \"..\" + module_name\n        module = import_module(module_name)\n        context.modules.update({f\"{module.__name__}\":module})\nload_modules()",
+        "detail": "module.router",
+        "documentation": {}
+    },
+    {
+        "label": "getModuleNameFromFunc",
+        "kind": 2,
+        "importPath": "module.tools",
+        "description": "module.tools",
+        "peekOfCode": "def getModuleNameFromFunc(func):\n    temp:str = inspect.getmodule(func)\n    \"\"\"\n    output:str = \"\"\n    tag:int = 0\n    for i in temp:\n        if(i == \"\\'\"):\n            tag += 1\n        if(tag == 1):\n            output += i",
+        "detail": "module.tools",
+        "documentation": {}
+    },
+    {
+        "label": "getClassNameFromFunc",
+        "kind": 2,
+        "importPath": "module.tools",
+        "description": "module.tools",
+        "peekOfCode": "def getClassNameFromFunc(func):\n    temp = \"\"\n    for i in func.__qualname__:\n        if(i == \".\"):\n            break\n        temp += i\n    return temp\n#! 此方法被弃用！\ndef getObjName(p:object) -> str:\n    for line in inspect.getframeinfo(inspect.currentframe().f_back)[3]:",
+        "detail": "module.tools",
+        "documentation": {}
+    },
+    {
+        "label": "getObjName",
+        "kind": 2,
+        "importPath": "module.tools",
+        "description": "module.tools",
+        "peekOfCode": "def getObjName(p:object) -> str:\n    for line in inspect.getframeinfo(inspect.currentframe().f_back)[3]:\n        m = re.search(r'\\bvarname\\s*\\(\\s*([A-Za-z_][A-Za-z0-9_]*)\\s*\\)', line)\n        if m:\n            return m.group(1)",
+        "detail": "module.tools",
+        "documentation": {}
+    },
+    {
+        "label": "loadBanList",
+        "kind": 2,
+        "importPath": "task_route.kickCheck",
+        "description": "task_route.kickCheck",
+        "peekOfCode": "def loadBanList():\n        fp = open(\"test.json5\", mode=\"r\", encoding=config.encode)\n        context.ban_list = pyjson5.decode_io(fp=fp)\n        fp.close()\n#* 使用 @initRegister 注册插件的初始化函数\n@initRegister\ndef init():\n        global enable_ip, enable_name, enable_uuid, enable_full_search\n        loadBanList()\n        #* 基础版配置文件生成器",
+        "detail": "task_route.kickCheck",
+        "documentation": {}
+    },
+    {
+        "label": "init",
+        "kind": 2,
+        "importPath": "task_route.kickCheck",
+        "description": "task_route.kickCheck",
+        "peekOfCode": "def init():\n        global enable_ip, enable_name, enable_uuid, enable_full_search\n        loadBanList()\n        #* 基础版配置文件生成器\n        # context.config_plug_kickCheck:configIO.Config = configIO.Config(\"kickCheck\")\n        # enable_ip =  context.config_plug_kickCheck.setDefault(\"enable_ip\", enable_ip)\n        # enable_name = context.config_plug_kickCheck.setDefault(\"enable_name\", enable_name)\n        # enable_uuid = context.config_plug_kickCheck.setDefault(\"enable_uuid\", enable_uuid)\n        # enable_full_search = context.config_plug_kickCheck.setDefault(\"enable_full_search\", enable_full_search)\n        # context.config_plug_kickCheck.commit()",
+        "detail": "task_route.kickCheck",
+        "documentation": {}
+    },
+    {
+        "label": "cstr",
+        "kind": 5,
+        "importPath": "task_route.kickCheck",
+        "description": "task_route.kickCheck",
+        "peekOfCode": "cstr = (\nf\"\"\"{{\n        //* PlugName: kickCheck\n        enable_ip:false,                 //! 启用ip识别\n        enable_name:true,                //* 启用名字识别\n        enable_uuid:true,                //* 启用UUID识别\n        //? FullSearch\n        enable_full_search:false         //! 启用全索检  切勿启用 可能会导致bug\n}}\n\"\"\"",
+        "detail": "task_route.kickCheck",
+        "documentation": {}
+    },
+    {
+        "label": "enable_ip:bool",
+        "kind": 5,
+        "importPath": "task_route.kickCheck",
+        "description": "task_route.kickCheck",
+        "peekOfCode": "enable_ip:bool = False\nenable_name:bool = True\nenable_uuid:bool = True\n#? FullSearch\nenable_full_search:bool = False                         #! 功能还没做好 开了会炸！\n#* End Config\ndef loadBanList():\n        fp = open(\"test.json5\", mode=\"r\", encoding=config.encode)\n        context.ban_list = pyjson5.decode_io(fp=fp)\n        fp.close()",
+        "detail": "task_route.kickCheck",
+        "documentation": {}
+    },
+    {
+        "label": "enable_name:bool",
+        "kind": 5,
+        "importPath": "task_route.kickCheck",
+        "description": "task_route.kickCheck",
+        "peekOfCode": "enable_name:bool = True\nenable_uuid:bool = True\n#? FullSearch\nenable_full_search:bool = False                         #! 功能还没做好 开了会炸！\n#* End Config\ndef loadBanList():\n        fp = open(\"test.json5\", mode=\"r\", encoding=config.encode)\n        context.ban_list = pyjson5.decode_io(fp=fp)\n        fp.close()\n#* 使用 @initRegister 注册插件的初始化函数",
+        "detail": "task_route.kickCheck",
+        "documentation": {}
+    },
+    {
+        "label": "enable_uuid:bool",
+        "kind": 5,
+        "importPath": "task_route.kickCheck",
+        "description": "task_route.kickCheck",
+        "peekOfCode": "enable_uuid:bool = True\n#? FullSearch\nenable_full_search:bool = False                         #! 功能还没做好 开了会炸！\n#* End Config\ndef loadBanList():\n        fp = open(\"test.json5\", mode=\"r\", encoding=config.encode)\n        context.ban_list = pyjson5.decode_io(fp=fp)\n        fp.close()\n#* 使用 @initRegister 注册插件的初始化函数\n@initRegister",
+        "detail": "task_route.kickCheck",
+        "documentation": {}
+    },
+    {
+        "label": "enable_full_search:bool",
+        "kind": 5,
+        "importPath": "task_route.kickCheck",
+        "description": "task_route.kickCheck",
+        "peekOfCode": "enable_full_search:bool = False                         #! 功能还没做好 开了会炸！\n#* End Config\ndef loadBanList():\n        fp = open(\"test.json5\", mode=\"r\", encoding=config.encode)\n        context.ban_list = pyjson5.decode_io(fp=fp)\n        fp.close()\n#* 使用 @initRegister 注册插件的初始化函数\n@initRegister\ndef init():\n        global enable_ip, enable_name, enable_uuid, enable_full_search",
+        "detail": "task_route.kickCheck",
+        "documentation": {}
+    },
+    {
+        "label": "modules",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "modules = [\n    \"task_route.kickCheck\",\n    \"module.configIO\"\n]\nencode:str = \"utf-8\"",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "encode:str",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "encode:str = \"utf-8\"",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "server",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "server = \"ws://localhost:23080\"\nasync def main():\n    async with websockets.connect(server) as websocket:\n        context.context = websocket\n        while True:\n            command = await websocket.recv()\n            print(command)\n            await router.taskRoute(command)\nasyncio.run(main())",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def log(text):\n    def decorator(func):\n        @functools.wraps(func)\n        def wrapper(*args, **kw):\n            print('%s %s():' % (text, func.__name__))\n            return func(*args, **kw)\n        return wrapper\n    return decorator\n@log('excute')\ndef now():",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "now",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def now():\n    print('2020-8-5')\nnow()\nprint(f\"decorated name: {now.__name__}\")",
+        "detail": "test",
+        "documentation": {}
+    }
+]
