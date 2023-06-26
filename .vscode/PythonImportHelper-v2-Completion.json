@@ -26,7 +26,7 @@
         "documentation": {}
     },
     {
-        "label": "context",
+        "label": "tools",
         "importPath": "module",
         "description": "module",
         "isExtraImport": true,
@@ -34,7 +34,7 @@
         "documentation": {}
     },
     {
-        "label": "tools",
+        "label": "context",
         "importPath": "module",
         "description": "module",
         "isExtraImport": true,
@@ -58,7 +58,31 @@
         "documentation": {}
     },
     {
-        "label": "router",
+        "label": "configIO",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "context",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "tools",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "register",
         "importPath": "module",
         "description": "module",
         "isExtraImport": true,
@@ -93,26 +117,50 @@
     },
     {
         "label": "initRegister",
-        "importPath": "module.router",
-        "description": "module.router",
+        "importPath": "module.register",
+        "description": "module.register",
         "isExtraImport": true,
-        "detail": "module.router",
-        "documentation": {}
-    },
-    {
-        "label": "routeRegister",
-        "importPath": "module.router",
-        "description": "module.router",
-        "isExtraImport": true,
-        "detail": "module.router",
+        "detail": "module.register",
         "documentation": {}
     },
     {
         "label": "initRegister",
-        "importPath": "module.router",
-        "description": "module.router",
+        "importPath": "module.register",
+        "description": "module.register",
         "isExtraImport": true,
-        "detail": "module.router",
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
+        "label": "routeRegister",
+        "importPath": "module.register",
+        "description": "module.register",
+        "isExtraImport": true,
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
+        "label": "initRegister",
+        "importPath": "module.register",
+        "description": "module.register",
+        "isExtraImport": true,
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
+        "label": "initRegister",
+        "importPath": "module.register",
+        "description": "module.register",
+        "isExtraImport": true,
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
+        "label": "timerBasicRegister",
+        "importPath": "module.register",
+        "description": "module.register",
+        "isExtraImport": true,
+        "detail": "module.register",
         "documentation": {}
     },
     {
@@ -167,6 +215,23 @@
         "documentation": {}
     },
     {
+        "label": "schedule",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "schedule",
+        "description": "schedule",
+        "detail": "schedule",
+        "documentation": {}
+    },
+    {
+        "label": "run_pending",
+        "importPath": "schedule",
+        "description": "schedule",
+        "isExtraImport": true,
+        "detail": "schedule",
+        "documentation": {}
+    },
+    {
         "label": "inspect",
         "kind": 6,
         "isExtraImport": true,
@@ -185,12 +250,90 @@
         "documentation": {}
     },
     {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "wget",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "wget",
+        "description": "wget",
+        "detail": "wget",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "module.configIO",
+        "description": "module.configIO",
+        "isExtraImport": true,
+        "detail": "module.configIO",
+        "documentation": {}
+    },
+    {
+        "label": "pyBool2Json",
+        "importPath": "module.configIO",
+        "description": "module.configIO",
+        "isExtraImport": true,
+        "detail": "module.configIO",
+        "documentation": {}
+    },
+    {
         "label": "time",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "time",
         "description": "time",
         "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "atexit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "atexit",
+        "description": "atexit",
+        "detail": "atexit",
+        "documentation": {}
+    },
+    {
+        "label": "signal",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "signal",
+        "description": "signal",
+        "detail": "signal",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Thread",
+        "importPath": "threading",
+        "description": "threading",
+        "isExtraImport": true,
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
+        "label": "traceback",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "traceback",
+        "description": "traceback",
+        "detail": "traceback",
         "documentation": {}
     },
     {
@@ -207,7 +350,7 @@
         "kind": 6,
         "importPath": "module.configIO",
         "description": "module.configIO",
-        "peekOfCode": "class Config():\n    global path\n    def __init__(self, name:str) -> None:\n        global path\n        self.config:dict = dict()\n        self.config_path = f\"{path}/{name}.json5\"\n        if(os.path.exists(self.config_path)):\n            self.read()\n        pass\n    def __getConfigFileObj(self, mode:str) -> object:",
+        "peekOfCode": "class Config():\n    global path\n    def __init__(self, name: str) -> None:\n        global path\n        self.config: dict = dict()\n        self.config_path = f\"{path}/{name}.json5\"\n        if (os.path.exists(self.config_path)):\n            self.read()\n        pass\n    def __getConfigFileObj(self, mode: str) -> object:",
         "detail": "module.configIO",
         "documentation": {}
     },
@@ -216,7 +359,16 @@
         "kind": 2,
         "importPath": "module.configIO",
         "description": "module.configIO",
-        "peekOfCode": "def init():\n    global path\n    if(not os.path.exists(path)):\n        os.mkdir(path)\nclass Config():\n    global path\n    def __init__(self, name:str) -> None:\n        global path\n        self.config:dict = dict()\n        self.config_path = f\"{path}/{name}.json5\"",
+        "peekOfCode": "def init():\n    global path\n    if (not os.path.exists(path)):\n        os.mkdir(path)\nclass Config():\n    global path\n    def __init__(self, name: str) -> None:\n        global path\n        self.config: dict = dict()\n        self.config_path = f\"{path}/{name}.json5\"",
+        "detail": "module.configIO",
+        "documentation": {}
+    },
+    {
+        "label": "pyBool2Json",
+        "kind": 2,
+        "importPath": "module.configIO",
+        "description": "module.configIO",
+        "peekOfCode": "def pyBool2Json(flag:bool) -> str:\n    if(flag):\n        return \"true\"\n    else:\n        return \"false\"\np2J = pyBool2Json",
         "detail": "module.configIO",
         "documentation": {}
     },
@@ -225,7 +377,16 @@
         "kind": 5,
         "importPath": "module.configIO",
         "description": "module.configIO",
-        "peekOfCode": "path = \"config\"\n#* End Config\n@initRegister\ndef init():\n    global path\n    if(not os.path.exists(path)):\n        os.mkdir(path)\nclass Config():\n    global path\n    def __init__(self, name:str) -> None:",
+        "peekOfCode": "path = \"config\"\n# * End Config\n@initRegister\ndef init():\n    global path\n    if (not os.path.exists(path)):\n        os.mkdir(path)\nclass Config():\n    global path\n    def __init__(self, name: str) -> None:",
+        "detail": "module.configIO",
+        "documentation": {}
+    },
+    {
+        "label": "p2J",
+        "kind": 5,
+        "importPath": "module.configIO",
+        "description": "module.configIO",
+        "peekOfCode": "p2J = pyBool2Json",
         "detail": "module.configIO",
         "documentation": {}
     },
@@ -234,7 +395,7 @@
         "kind": 5,
         "importPath": "module.context",
         "description": "module.context",
-        "peekOfCode": "context = None\nroute_func_list:list = list()\nroutes:dict = dict()\nmodules:dict = dict()\nroute2module:dict() = dict()                #! 路由转模块名",
+        "peekOfCode": "context = None\nroute_func_list:list = list()\nroutes:dict = dict()\nmodules:dict = dict()\nroute2module:dict = dict()                #! 路由转模块名\nevent_func_list:list = list()\nevents:dict = dict()\nevent2module:dict = dict()\ntimers = list()\ntimer_info = dict()",
         "detail": "module.context",
         "documentation": {}
     },
@@ -243,7 +404,7 @@
         "kind": 5,
         "importPath": "module.context",
         "description": "module.context",
-        "peekOfCode": "route_func_list:list = list()\nroutes:dict = dict()\nmodules:dict = dict()\nroute2module:dict() = dict()                #! 路由转模块名",
+        "peekOfCode": "route_func_list:list = list()\nroutes:dict = dict()\nmodules:dict = dict()\nroute2module:dict = dict()                #! 路由转模块名\nevent_func_list:list = list()\nevents:dict = dict()\nevent2module:dict = dict()\ntimers = list()\ntimer_info = dict()",
         "detail": "module.context",
         "documentation": {}
     },
@@ -252,7 +413,7 @@
         "kind": 5,
         "importPath": "module.context",
         "description": "module.context",
-        "peekOfCode": "routes:dict = dict()\nmodules:dict = dict()\nroute2module:dict() = dict()                #! 路由转模块名",
+        "peekOfCode": "routes:dict = dict()\nmodules:dict = dict()\nroute2module:dict = dict()                #! 路由转模块名\nevent_func_list:list = list()\nevents:dict = dict()\nevent2module:dict = dict()\ntimers = list()\ntimer_info = dict()",
         "detail": "module.context",
         "documentation": {}
     },
@@ -261,44 +422,116 @@
         "kind": 5,
         "importPath": "module.context",
         "description": "module.context",
-        "peekOfCode": "modules:dict = dict()\nroute2module:dict() = dict()                #! 路由转模块名",
+        "peekOfCode": "modules:dict = dict()\nroute2module:dict = dict()                #! 路由转模块名\nevent_func_list:list = list()\nevents:dict = dict()\nevent2module:dict = dict()\ntimers = list()\ntimer_info = dict()",
         "detail": "module.context",
         "documentation": {}
     },
     {
-        "label": "route2module:dict()",
+        "label": "route2module:dict",
         "kind": 5,
         "importPath": "module.context",
         "description": "module.context",
-        "peekOfCode": "route2module:dict() = dict()                #! 路由转模块名",
+        "peekOfCode": "route2module:dict = dict()                #! 路由转模块名\nevent_func_list:list = list()\nevents:dict = dict()\nevent2module:dict = dict()\ntimers = list()\ntimer_info = dict()",
         "detail": "module.context",
+        "documentation": {}
+    },
+    {
+        "label": "event_func_list:list",
+        "kind": 5,
+        "importPath": "module.context",
+        "description": "module.context",
+        "peekOfCode": "event_func_list:list = list()\nevents:dict = dict()\nevent2module:dict = dict()\ntimers = list()\ntimer_info = dict()",
+        "detail": "module.context",
+        "documentation": {}
+    },
+    {
+        "label": "events:dict",
+        "kind": 5,
+        "importPath": "module.context",
+        "description": "module.context",
+        "peekOfCode": "events:dict = dict()\nevent2module:dict = dict()\ntimers = list()\ntimer_info = dict()",
+        "detail": "module.context",
+        "documentation": {}
+    },
+    {
+        "label": "event2module:dict",
+        "kind": 5,
+        "importPath": "module.context",
+        "description": "module.context",
+        "peekOfCode": "event2module:dict = dict()\ntimers = list()\ntimer_info = dict()",
+        "detail": "module.context",
+        "documentation": {}
+    },
+    {
+        "label": "timers",
+        "kind": 5,
+        "importPath": "module.context",
+        "description": "module.context",
+        "peekOfCode": "timers = list()\ntimer_info = dict()",
+        "detail": "module.context",
+        "documentation": {}
+    },
+    {
+        "label": "timer_info",
+        "kind": 5,
+        "importPath": "module.context",
+        "description": "module.context",
+        "peekOfCode": "timer_info = dict()",
+        "detail": "module.context",
+        "documentation": {}
+    },
+    {
+        "label": "callEvent",
+        "kind": 2,
+        "importPath": "module.register",
+        "description": "module.register",
+        "peekOfCode": "def callEvent(event_name:str, *args, **kwargs):\n    for event_n in context.events.keys():\n        if(event_n == event_name):\n            module_name:str = context.event2module[event_n]\n            func_name:str = context.events[event_n]\n            module = context.modules[module_name]\n            func = getattr(module,func_name)\n            func(*args, **kwargs)\ndef routeRegister(route:str):\n    def inner_routeRegister(func):",
+        "detail": "module.register",
         "documentation": {}
     },
     {
         "label": "routeRegister",
         "kind": 2,
-        "importPath": "module.router",
-        "description": "module.router",
+        "importPath": "module.register",
+        "description": "module.register",
         "peekOfCode": "def routeRegister(route:str):\n    def inner_routeRegister(func):\n        if(not(route in context.routes.keys())):\n            #! 第一次加载时注册路由\n            context.route_func_list.append(func.__name__)\n            context.routes.update({f\"{route}\":f\"{func.__name__}\"})\n            context.route2module.update({f\"{route}\":f\"{tools.getModuleNameFromFunc(func)}\"})\n            @wraps(func)\n            def wrap(*args, **kwargs):\n                return func(*args, **kwargs)",
-        "detail": "module.router",
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
+        "label": "eventRegister",
+        "kind": 2,
+        "importPath": "module.register",
+        "description": "module.register",
+        "peekOfCode": "def eventRegister(event:str):\n    def inner_eventRegister(func):\n        if(not(event in context.events.keys())):\n            #! 第一次加载时注册事件\n            context.event_func_list.append(func.__name__)\n            context.events.update({f\"{event}\":f\"{func.__name__}\"})\n            context.event2module.update({f\"{event}\":f\"{tools.getModuleNameFromFunc(func)}\"})\n            @wraps(func)\n            def wrap(*args, **kwargs):\n                return func(*args, **kwargs)",
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
+        "label": "timerBasicRegister",
+        "kind": 2,
+        "importPath": "module.register",
+        "description": "module.register",
+        "peekOfCode": "def timerBasicRegister(time_sec:int, type:str = \"cycle\", cycles:int = -1, clock = None, until = None):\n    \"\"\"\n    基础计时器 精度较低\n    计时器函数不支持参数 \\n\n    time_sec => 几秒执行一次 \\n\n    type = normal / cycle / clock \\n\n    clock : 哪个时间点执行 只支持一天的哪个时间点 \\n\n    !!! 即便使用了 clock 模式 仍然计算计时器循环 !!! \\n\n    until : 哪个时间点结束\n    cycles => 循环执行次数 \\n",
+        "detail": "module.register",
         "documentation": {}
     },
     {
         "label": "initRegister",
         "kind": 2,
-        "importPath": "module.router",
-        "description": "module.router",
+        "importPath": "module.register",
+        "description": "module.register",
         "peekOfCode": "def initRegister(func):\n    #print(\"after\")\n    @wraps(func)\n    def warp():\n        return func\n    func()\n    # do init\n    #print(\"before\")\n    return warp\ndef load_modules():",
-        "detail": "module.router",
+        "detail": "module.register",
         "documentation": {}
     },
     {
         "label": "load_modules",
         "kind": 2,
-        "importPath": "module.router",
-        "description": "module.router",
-        "peekOfCode": "def load_modules():\n    for module_name in config.modules:\n        # module_name = \"..\" + module_name\n        module = import_module(module_name)\n        context.modules.update({f\"{module.__name__}\":module})\nload_modules()",
-        "detail": "module.router",
+        "importPath": "module.register",
+        "description": "module.register",
+        "peekOfCode": "def load_modules():\n    for module_name in config.modules:\n        # module_name = \"..\" + module_name\n        module = import_module(module_name)\n        context.modules.update({f\"{module.__name__}\" : module})\nload_modules()",
+        "detail": "module.register",
         "documentation": {}
     },
     {
@@ -329,74 +562,137 @@
         "documentation": {}
     },
     {
-        "label": "loadBanList",
+        "label": "downloads",
         "kind": 2,
-        "importPath": "task_route.kickCheck",
-        "description": "task_route.kickCheck",
-        "peekOfCode": "def loadBanList():\n        fp = open(\"test.json5\", mode=\"r\", encoding=config.encode)\n        context.ban_list = pyjson5.decode_io(fp=fp)\n        fp.close()\n#* 使用 @initRegister 注册插件的初始化函数\n@initRegister\ndef init():\n        global enable_ip, enable_name, enable_uuid, enable_full_search\n        loadBanList()\n        #* 基础版配置文件生成器",
-        "detail": "task_route.kickCheck",
+        "importPath": "plugin.downloadBanlist",
+        "description": "plugin.downloadBanlist",
+        "peekOfCode": "def downloads():\n    global local_list, temp_dir, output_file, lf_cstr\n    context.config_plug_downloadBanlist.read()\n    json_objs:list = list()\n    if(context.config_plug_downloadBanlist[\"urls\"]):\n        for url in context.config_plug_downloadBanlist[\"urls\"]:\n            try:\n                file_name = wget.filename_from_url(url)\n                file_all_path = f\"{temp_dir}/{file_name}\"\n                response = requests.get(url)",
+        "detail": "plugin.downloadBanlist",
         "documentation": {}
     },
     {
         "label": "init",
         "kind": 2,
-        "importPath": "task_route.kickCheck",
-        "description": "task_route.kickCheck",
-        "peekOfCode": "def init():\n        global enable_ip, enable_name, enable_uuid, enable_full_search\n        loadBanList()\n        #* 基础版配置文件生成器\n        # context.config_plug_kickCheck:configIO.Config = configIO.Config(\"kickCheck\")\n        # enable_ip =  context.config_plug_kickCheck.setDefault(\"enable_ip\", enable_ip)\n        # enable_name = context.config_plug_kickCheck.setDefault(\"enable_name\", enable_name)\n        # enable_uuid = context.config_plug_kickCheck.setDefault(\"enable_uuid\", enable_uuid)\n        # enable_full_search = context.config_plug_kickCheck.setDefault(\"enable_full_search\", enable_full_search)\n        # context.config_plug_kickCheck.commit()",
-        "detail": "task_route.kickCheck",
+        "importPath": "plugin.downloadBanlist",
+        "description": "plugin.downloadBanlist",
+        "peekOfCode": "def init():\n    global temp_dir, output_file, local_list, cstr, list_dir\n    # * 写入默认自定义配置文件\n    context.config_plug_downloadBanlist: configIO.Config = configIO.Config(\"downloadBanlist\")\n    if (not context.config_plug_downloadBanlist.defaultCheck(\"temp_dir\", \"output_file\", \"urls\", \"local_list\", \"list_dir\")):\n        context.config_plug_downloadBanlist.setRAW_STR(cstr)\n    context.config_plug_downloadBanlist.read()\n    temp_dir = context.config_plug_downloadBanlist[\"temp_dir\"]\n    output_file = context.config_plug_downloadBanlist[\"output_file\"]\n    local_list = context.config_plug_downloadBanlist[\"local_list\"]",
+        "detail": "plugin.downloadBanlist",
+        "documentation": {}
+    },
+    {
+        "label": "test",
+        "kind": 2,
+        "importPath": "plugin.downloadBanlist",
+        "description": "plugin.downloadBanlist",
+        "peekOfCode": "def test():\n    url = 'https://p0.ifengimg.com/2019_30/1106F5849B0A2A2A03AAD4B14374596C76B2BDAB_w1000_h626.jpg'\n    # 获取文件名\n    file_name = wget.filename_from_url(url)\n    print(file_name)  #1106F5849B0A2A2A03AAD4B14374596C76B2BDAB_w1000_h626.jpg\n    # 下载文件，使用默认文件名,结果返回文件名\n    file_name = wget.download(url)\n    print(file_name) #1106F5849B0A2A2A03AAD4B14374596C76B2BDAB_w1000_h626.jpg\n    # 下载文件，重新命名输出文件名\n    target_name = 't1.jpg'",
+        "detail": "plugin.downloadBanlist",
+        "documentation": {}
+    },
+    {
+        "label": "list_dir:str",
+        "kind": 5,
+        "importPath": "plugin.downloadBanlist",
+        "description": "plugin.downloadBanlist",
+        "peekOfCode": "list_dir:str = \"banlist\"\ntemp_dir:str = \"banlist/temp\"\noutput_file:str = \"banlist/banlist.json5\"\nlocal_list:str = \"banlist/local.json5\"\n#? End Config\n# * 自定义默认配置文件字符串\ncstr = (\n    f\"\"\"{{\n        //? PlugName: downloadBanlist\n        list_dir : \"{list_dir}\",",
+        "detail": "plugin.downloadBanlist",
+        "documentation": {}
+    },
+    {
+        "label": "temp_dir:str",
+        "kind": 5,
+        "importPath": "plugin.downloadBanlist",
+        "description": "plugin.downloadBanlist",
+        "peekOfCode": "temp_dir:str = \"banlist/temp\"\noutput_file:str = \"banlist/banlist.json5\"\nlocal_list:str = \"banlist/local.json5\"\n#? End Config\n# * 自定义默认配置文件字符串\ncstr = (\n    f\"\"\"{{\n        //? PlugName: downloadBanlist\n        list_dir : \"{list_dir}\",\n        temp_dir : \"{temp_dir}\",",
+        "detail": "plugin.downloadBanlist",
+        "documentation": {}
+    },
+    {
+        "label": "output_file:str",
+        "kind": 5,
+        "importPath": "plugin.downloadBanlist",
+        "description": "plugin.downloadBanlist",
+        "peekOfCode": "output_file:str = \"banlist/banlist.json5\"\nlocal_list:str = \"banlist/local.json5\"\n#? End Config\n# * 自定义默认配置文件字符串\ncstr = (\n    f\"\"\"{{\n        //? PlugName: downloadBanlist\n        list_dir : \"{list_dir}\",\n        temp_dir : \"{temp_dir}\",\n        output_file : \"{output_file}\",",
+        "detail": "plugin.downloadBanlist",
+        "documentation": {}
+    },
+    {
+        "label": "local_list:str",
+        "kind": 5,
+        "importPath": "plugin.downloadBanlist",
+        "description": "plugin.downloadBanlist",
+        "peekOfCode": "local_list:str = \"banlist/local.json5\"\n#? End Config\n# * 自定义默认配置文件字符串\ncstr = (\n    f\"\"\"{{\n        //? PlugName: downloadBanlist\n        list_dir : \"{list_dir}\",\n        temp_dir : \"{temp_dir}\",\n        output_file : \"{output_file}\",\n        local_list : \"{local_list}\",",
+        "detail": "plugin.downloadBanlist",
         "documentation": {}
     },
     {
         "label": "cstr",
         "kind": 5,
-        "importPath": "task_route.kickCheck",
-        "description": "task_route.kickCheck",
-        "peekOfCode": "cstr = (\nf\"\"\"{{\n        //* PlugName: kickCheck\n        enable_ip:false,                 //! 启用ip识别\n        enable_name:true,                //* 启用名字识别\n        enable_uuid:true,                //* 启用UUID识别\n        //? FullSearch\n        enable_full_search:false         //! 启用全索检  切勿启用 可能会导致bug\n}}\n\"\"\"",
-        "detail": "task_route.kickCheck",
+        "importPath": "plugin.downloadBanlist",
+        "description": "plugin.downloadBanlist",
+        "peekOfCode": "cstr = (\n    f\"\"\"{{\n        //? PlugName: downloadBanlist\n        list_dir : \"{list_dir}\",\n        temp_dir : \"{temp_dir}\",\n        output_file : \"{output_file}\",\n        local_list : \"{local_list}\",\n        //! 在下方添加列表URL\n        urls : [\n                \"https://gitee.com/gysdfhome/neo-uni-ban_-ban-list/raw/master/banlist.json5\"",
+        "detail": "plugin.downloadBanlist",
         "documentation": {}
     },
     {
-        "label": "enable_ip:bool",
+        "label": "loadBanList",
+        "kind": 2,
+        "importPath": "plugin.kickCheck",
+        "description": "plugin.kickCheck",
+        "peekOfCode": "def loadBanList():\n    file = \"./banlist/banlist.json5\"\n    fp = open(file=file, mode=\"r\", encoding=config.encode)\n    context.ban_list = pyjson5.decode_io(fp=fp)\n    fp.close()\n# * 使用 @initRegister 注册插件的初始化函数\n@initRegister\ndef init():\n    global enable_ip, enable_name, enable_uuid, enable_full_search\n    loadBanList()",
+        "detail": "plugin.kickCheck",
+        "documentation": {}
+    },
+    {
+        "label": "init",
+        "kind": 2,
+        "importPath": "plugin.kickCheck",
+        "description": "plugin.kickCheck",
+        "peekOfCode": "def init():\n    global enable_ip, enable_name, enable_uuid, enable_full_search\n    loadBanList()\n    # * 基础版配置文件生成器\n    # context.config_plug_kickCheck:configIO.Config = configIO.Config(\"kickCheck\")\n    # enable_ip =  context.config_plug_kickCheck.setDefault(\"enable_ip\", enable_ip)\n    # enable_name = context.config_plug_kickCheck.setDefault(\"enable_name\", enable_name)\n    # enable_uuid = context.config_plug_kickCheck.setDefault(\"enable_uuid\", enable_uuid)\n    # enable_full_search = context.config_plug_kickCheck.setDefault(\"enable_full_search\", enable_full_search)\n    # context.config_plug_kickCheck.commit()",
+        "detail": "plugin.kickCheck",
+        "documentation": {}
+    },
+    {
+        "label": "cstr",
         "kind": 5,
-        "importPath": "task_route.kickCheck",
-        "description": "task_route.kickCheck",
-        "peekOfCode": "enable_ip:bool = False\nenable_name:bool = True\nenable_uuid:bool = True\n#? FullSearch\nenable_full_search:bool = False                         #! 功能还没做好 开了会炸！\n#* End Config\ndef loadBanList():\n        fp = open(\"test.json5\", mode=\"r\", encoding=config.encode)\n        context.ban_list = pyjson5.decode_io(fp=fp)\n        fp.close()",
-        "detail": "task_route.kickCheck",
+        "importPath": "plugin.kickCheck",
+        "description": "plugin.kickCheck",
+        "peekOfCode": "cstr = (\n    f\"\"\"{{\n        //* PlugName: kickCheck\n        enable_ip : {configIO.p2J(enable_ip)},                 //! 启用ip识别\n        enable_name : {configIO.p2J(enable_name)},                //* 启用名字识别\n        enable_uuid : {configIO.p2J(enable_uuid)},                //* 启用UUID识别\n        //? FullSearch\n        enable_full_search : {configIO.p2J(enable_full_search)}         //! 启用全索检  切勿启用 可能会导致bug\n}}\n\"\"\"",
+        "detail": "plugin.kickCheck",
         "documentation": {}
     },
     {
-        "label": "enable_name:bool",
-        "kind": 5,
-        "importPath": "task_route.kickCheck",
-        "description": "task_route.kickCheck",
-        "peekOfCode": "enable_name:bool = True\nenable_uuid:bool = True\n#? FullSearch\nenable_full_search:bool = False                         #! 功能还没做好 开了会炸！\n#* End Config\ndef loadBanList():\n        fp = open(\"test.json5\", mode=\"r\", encoding=config.encode)\n        context.ban_list = pyjson5.decode_io(fp=fp)\n        fp.close()\n#* 使用 @initRegister 注册插件的初始化函数",
-        "detail": "task_route.kickCheck",
+        "label": "init",
+        "kind": 2,
+        "importPath": "plugin.test",
+        "description": "plugin.test",
+        "peekOfCode": "def init():\n    print(\"plugin \\\"test\\\" loaded\")\n@timerBasicRegister(time_sec= 10, type=\"cycle\", cycles=-1)\ndef timerFunc():\n    print(\"test\")\n@timerBasicRegister(time_sec=5,type=\"normal\")\ndef test():\n    print(\"只会执行一次\")",
+        "detail": "plugin.test",
         "documentation": {}
     },
     {
-        "label": "enable_uuid:bool",
-        "kind": 5,
-        "importPath": "task_route.kickCheck",
-        "description": "task_route.kickCheck",
-        "peekOfCode": "enable_uuid:bool = True\n#? FullSearch\nenable_full_search:bool = False                         #! 功能还没做好 开了会炸！\n#* End Config\ndef loadBanList():\n        fp = open(\"test.json5\", mode=\"r\", encoding=config.encode)\n        context.ban_list = pyjson5.decode_io(fp=fp)\n        fp.close()\n#* 使用 @initRegister 注册插件的初始化函数\n@initRegister",
-        "detail": "task_route.kickCheck",
+        "label": "timerFunc",
+        "kind": 2,
+        "importPath": "plugin.test",
+        "description": "plugin.test",
+        "peekOfCode": "def timerFunc():\n    print(\"test\")\n@timerBasicRegister(time_sec=5,type=\"normal\")\ndef test():\n    print(\"只会执行一次\")",
+        "detail": "plugin.test",
         "documentation": {}
     },
     {
-        "label": "enable_full_search:bool",
-        "kind": 5,
-        "importPath": "task_route.kickCheck",
-        "description": "task_route.kickCheck",
-        "peekOfCode": "enable_full_search:bool = False                         #! 功能还没做好 开了会炸！\n#* End Config\ndef loadBanList():\n        fp = open(\"test.json5\", mode=\"r\", encoding=config.encode)\n        context.ban_list = pyjson5.decode_io(fp=fp)\n        fp.close()\n#* 使用 @initRegister 注册插件的初始化函数\n@initRegister\ndef init():\n        global enable_ip, enable_name, enable_uuid, enable_full_search",
-        "detail": "task_route.kickCheck",
+        "label": "test",
+        "kind": 2,
+        "importPath": "plugin.test",
+        "description": "plugin.test",
+        "peekOfCode": "def test():\n    print(\"只会执行一次\")",
+        "detail": "plugin.test",
         "documentation": {}
     },
     {
-        "label": "modules",
+        "label": "modules:list",
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "modules = [\n    \"task_route.kickCheck\",\n    \"module.configIO\"\n]\nencode:str = \"utf-8\"",
+        "peekOfCode": "modules:list = [\n    #! 模块和插件无本质区别 只是模块本身更嵌入框架罢了\n    #! 此处排序影响加载顺序\n    #* 模块\n    \"module.configIO\",\n    #* 插件\n    \"plugin.downloadBanlist\",\n    \"plugin.kickCheck\",\n    \"plugin.test\"\n]",
         "detail": "config",
         "documentation": {}
     },
@@ -410,11 +706,56 @@
         "documentation": {}
     },
     {
+        "label": "term_sig_handler",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def term_sig_handler(signum, frame):\n    global flag_exit\n    flag_exit = True\n    schedule.run_all()\n    print ('catched singal: %d' % signum)\n    sys.exit()\n@atexit.register\ndef atexit_fun():\n    print ('i am exit, stack track:')\n    exc_type, exc_value, exc_tb = sys.exc_info()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "atexit_fun",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def atexit_fun():\n    print ('i am exit, stack track:')\n    exc_type, exc_value, exc_tb = sys.exc_info()\n    traceback.print_exception(exc_type, exc_value, exc_tb)\ndef scheduleRunner():\n    global flag_exit\n    while not flag_exit:\n        run_pending()\n        time.sleep(1)\nscheduleRunnerThread = Thread(target=scheduleRunner)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "scheduleRunner",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def scheduleRunner():\n    global flag_exit\n    while not flag_exit:\n        run_pending()\n        time.sleep(1)\nscheduleRunnerThread = Thread(target=scheduleRunner)\nasync def main():\n    signal.signal(signal.SIGTERM, term_sig_handler)\n    signal.signal(signal.SIGINT, term_sig_handler)\n    async with websockets.connect(server) as websocket:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "flag_exit",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "flag_exit = False\nserver = \"ws://localhost:23080\"\ndef term_sig_handler(signum, frame):\n    global flag_exit\n    flag_exit = True\n    schedule.run_all()\n    print ('catched singal: %d' % signum)\n    sys.exit()\n@atexit.register\ndef atexit_fun():",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
         "label": "server",
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "server = \"ws://localhost:23080\"\nasync def main():\n    async with websockets.connect(server) as websocket:\n        context.context = websocket\n        while True:\n            command = await websocket.recv()\n            print(command)\n            await router.taskRoute(command)\nasyncio.run(main())",
+        "peekOfCode": "server = \"ws://localhost:23080\"\ndef term_sig_handler(signum, frame):\n    global flag_exit\n    flag_exit = True\n    schedule.run_all()\n    print ('catched singal: %d' % signum)\n    sys.exit()\n@atexit.register\ndef atexit_fun():\n    print ('i am exit, stack track:')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "scheduleRunnerThread",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "scheduleRunnerThread = Thread(target=scheduleRunner)\nasync def main():\n    signal.signal(signal.SIGTERM, term_sig_handler)\n    signal.signal(signal.SIGINT, term_sig_handler)\n    async with websockets.connect(server) as websocket:\n        context.context = websocket\n        scheduleRunnerThread.start()\n        while True:\n            command = await websocket.recv()\n            print(command)",
         "detail": "main",
         "documentation": {}
     },

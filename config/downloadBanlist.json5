@@ -1,0 +1,11 @@
+{
+        //? PlugName: downloadBanlist
+        list_dir : "banlist",
+        temp_dir : "banlist/temp",
+        output_file : "banlist/banlist.json5",
+        local_list : "banlist/local.json5",
+        //! 在下方添加列表URL
+        urls : [
+                "https://gitee.com/gysdfhome/neo-uni-ban_-ban-list/raw/master/banlist.json5"
+        ]
+}
