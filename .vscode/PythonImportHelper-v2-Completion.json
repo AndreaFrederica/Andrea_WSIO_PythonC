@@ -42,7 +42,7 @@
         "documentation": {}
     },
     {
-        "label": "configIO",
+        "label": "tools",
         "importPath": "module",
         "description": "module",
         "isExtraImport": true,
@@ -51,6 +51,14 @@
     },
     {
         "label": "context",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "configIO",
         "importPath": "module",
         "description": "module",
         "isExtraImport": true,
@@ -132,6 +140,22 @@
         "documentation": {}
     },
     {
+        "label": "timerBasicRegister",
+        "importPath": "module.register",
+        "description": "module.register",
+        "isExtraImport": true,
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
+        "label": "callEvent",
+        "importPath": "module.register",
+        "description": "module.register",
+        "isExtraImport": true,
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
         "label": "routeRegister",
         "importPath": "module.register",
         "description": "module.register",
@@ -141,6 +165,14 @@
     },
     {
         "label": "initRegister",
+        "importPath": "module.register",
+        "description": "module.register",
+        "isExtraImport": true,
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
+        "label": "eventRegister",
         "importPath": "module.register",
         "description": "module.register",
         "isExtraImport": true,
@@ -224,14 +256,6 @@
         "documentation": {}
     },
     {
-        "label": "run_pending",
-        "importPath": "schedule",
-        "description": "schedule",
-        "isExtraImport": true,
-        "detail": "schedule",
-        "documentation": {}
-    },
-    {
         "label": "inspect",
         "kind": 6,
         "isExtraImport": true,
@@ -268,11 +292,12 @@
         "documentation": {}
     },
     {
-        "label": "path",
-        "importPath": "module.configIO",
-        "description": "module.configIO",
+        "label": "time",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "module.configIO",
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
         "documentation": {}
     },
     {
@@ -281,15 +306,6 @@
         "description": "module.configIO",
         "isExtraImport": true,
         "detail": "module.configIO",
-        "documentation": {}
-    },
-    {
-        "label": "time",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
         "documentation": {}
     },
     {
@@ -485,7 +501,7 @@
         "kind": 2,
         "importPath": "module.register",
         "description": "module.register",
-        "peekOfCode": "def callEvent(event_name:str, *args, **kwargs):\n    for event_n in context.events.keys():\n        if(event_n == event_name):\n            module_name:str = context.event2module[event_n]\n            func_name:str = context.events[event_n]\n            module = context.modules[module_name]\n            func = getattr(module,func_name)\n            func(*args, **kwargs)\ndef routeRegister(route:str):\n    def inner_routeRegister(func):",
+        "peekOfCode": "def callEvent(event_name:str, *args, **kwargs):\n    for event_n in context.events.keys():\n        if(event_n == event_name):\n            module_name:str = context.event2module[event_n]\n            func_name:str = context.events[event_n]\n            module = context.modules[module_name]\n            func = getattr(module,func_name)\n            tools.waitAsync(func, *args, **kwargs)\ndef routeRegister(route:str):\n    def inner_routeRegister(func):",
         "detail": "module.register",
         "documentation": {}
     },
@@ -512,7 +528,7 @@
         "kind": 2,
         "importPath": "module.register",
         "description": "module.register",
-        "peekOfCode": "def timerBasicRegister(time_sec:int, type:str = \"cycle\", cycles:int = -1, clock = None, until = None):\n    \"\"\"\n    基础计时器 精度较低\n    计时器函数不支持参数 \\n\n    time_sec => 几秒执行一次 \\n\n    type = normal / cycle / clock \\n\n    clock : 哪个时间点执行 只支持一天的哪个时间点 \\n\n    !!! 即便使用了 clock 模式 仍然计算计时器循环 !!! \\n\n    until : 哪个时间点结束\n    cycles => 循环执行次数 \\n",
+        "peekOfCode": "def timerBasicRegister(time_sec:int = 100, type:str = \"cycle\", cycles:int = -1, clock = None, until = None):\n    \"\"\"\n    基础计时器 精度较低\n    计时器函数不支持参数 \\n\n    time_sec => 几秒执行一次 \\n\n    type = normal / cycle / clock \\n\n    clock : 哪个时间点执行 只支持一天的哪个时间点 \\n\n    !!! 即便使用了 clock 模式 仍然计算计时器循环 !!! \\n\n    until : 哪个时间点结束\n    cycles => 循环执行次数 \\n",
         "detail": "module.register",
         "documentation": {}
     },
@@ -548,7 +564,16 @@
         "kind": 2,
         "importPath": "module.tools",
         "description": "module.tools",
-        "peekOfCode": "def getClassNameFromFunc(func):\n    temp = \"\"\n    for i in func.__qualname__:\n        if(i == \".\"):\n            break\n        temp += i\n    return temp\n#! 此方法被弃用！\ndef getObjName(p:object) -> str:\n    for line in inspect.getframeinfo(inspect.currentframe().f_back)[3]:",
+        "peekOfCode": "def getClassNameFromFunc(func):\n    temp = \"\"\n    for i in func.__qualname__:\n        if(i == \".\"):\n            break\n        temp += i\n    return temp\ndef waitAsync(func, *args, **kwargs):\n    if(inspect.iscoroutinefunction):\n        loop = asyncio.new_event_loop()",
+        "detail": "module.tools",
+        "documentation": {}
+    },
+    {
+        "label": "waitAsync",
+        "kind": 2,
+        "importPath": "module.tools",
+        "description": "module.tools",
+        "peekOfCode": "def waitAsync(func, *args, **kwargs):\n    if(inspect.iscoroutinefunction):\n        loop = asyncio.new_event_loop()\n        loop.run_until_complete(func(*args, **kwargs))\n        loop.close()\n    else:\n        func(*args, **kwargs)\n#! 此方法被弃用！\ndef getObjName(p:object) -> str:\n    for line in inspect.getframeinfo(inspect.currentframe().f_back)[3]:",
         "detail": "module.tools",
         "documentation": {}
     },
@@ -719,7 +744,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def atexit_fun():\n    print ('i am exit, stack track:')\n    exc_type, exc_value, exc_tb = sys.exc_info()\n    traceback.print_exception(exc_type, exc_value, exc_tb)\ndef scheduleRunner():\n    global flag_exit\n    while not flag_exit:\n        run_pending()\n        time.sleep(1)\nscheduleRunnerThread = Thread(target=scheduleRunner)",
+        "peekOfCode": "def atexit_fun():\n    print ('i am exit, stack track:')\n    exc_type, exc_value, exc_tb = sys.exc_info()\n    traceback.print_exception(exc_type, exc_value, exc_tb)\ndef scheduleRunner():\n    global flag_exit\n    while not flag_exit:\n        schedule.run_pending()\n        time.sleep(1)\nscheduleRunnerThread = Thread(target=scheduleRunner)",
         "detail": "main",
         "documentation": {}
     },
@@ -728,7 +753,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def scheduleRunner():\n    global flag_exit\n    while not flag_exit:\n        run_pending()\n        time.sleep(1)\nscheduleRunnerThread = Thread(target=scheduleRunner)\nasync def main():\n    signal.signal(signal.SIGTERM, term_sig_handler)\n    signal.signal(signal.SIGINT, term_sig_handler)\n    async with websockets.connect(server) as websocket:",
+        "peekOfCode": "def scheduleRunner():\n    global flag_exit\n    while not flag_exit:\n        schedule.run_pending()\n        time.sleep(1)\nscheduleRunnerThread = Thread(target=scheduleRunner)\nasync def main():\n    signal.signal(signal.SIGTERM, term_sig_handler)\n    signal.signal(signal.SIGINT, term_sig_handler)\n    async with websockets.connect(server) as websocket:",
         "detail": "main",
         "documentation": {}
     },

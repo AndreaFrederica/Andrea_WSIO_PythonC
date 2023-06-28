@@ -35,7 +35,7 @@ def callEvent(event_name:str, *args, **kwargs):
             func_name:str = context.events[event_n]
             module = context.modules[module_name]
             func = getattr(module,func_name)
-            func(*args, **kwargs)
+            tools.waitAsync(func, *args, **kwargs)
 
 def routeRegister(route:str):
     def inner_routeRegister(func):
@@ -73,7 +73,7 @@ def eventRegister(event:str):
             return wrap
     return inner_eventRegister
 
-def timerBasicRegister(time_sec:int, type:str = "cycle", cycles:int = -1, clock = None, until = None):
+def timerBasicRegister(time_sec:int = 100, type:str = "cycle", cycles:int = -1, clock = None, until = None):
     """
     基础计时器 精度较低
     计时器函数不支持参数 \n
@@ -120,9 +120,9 @@ def timerBasicRegister(time_sec:int, type:str = "cycle", cycles:int = -1, clock 
                         schedule.every(time_sec).seconds.do(neofunc).tag(func.__name__)
             else:
                 if(until == None):
-                    schedule.every().days.at("10:30").do(neofunc)
+                    schedule.every().days.at(clock).do(neofunc)
                 else:
-                    schedule.every().days.at("10:30").do(neofunc).until(until)
+                    schedule.every().days.at(clock).do(neofunc).until(until)
                     pass
                 pass
             #* 完成注册

@@ -1,3 +1,4 @@
+import asyncio
 import inspect
 import re
 
@@ -22,6 +23,16 @@ def getClassNameFromFunc(func):
             break
         temp += i
     return temp
+
+def waitAsync(func, *args, **kwargs):
+    if(inspect.iscoroutinefunction):
+        loop = asyncio.new_event_loop()
+        loop.run_until_complete(func(*args, **kwargs))
+        loop.close()
+    else:
+        func(*args, **kwargs)
+
+
 
 #! 此方法被弃用！
 def getObjName(p:object) -> str:

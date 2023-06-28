@@ -1,12 +1,13 @@
+import asyncio
 import json
 import pyjson5
 import requests
 import wget
 import os
-from module import configIO, context
+import module
+from module import tools, context, configIO
 
-from module.register import initRegister
-from module.configIO import path
+from module.register import initRegister, timerBasicRegister, callEvent
 
 #! Plugin Default Config
 list_dir:str = "banlist"
@@ -59,6 +60,8 @@ lf_cstr=(
 )
 # ? End
 
+#@timerBasicRegister(type="clock",cycles=-1,clock="23:00")
+@timerBasicRegister(time_sec=10,cycles=-1)
 def downloads():
     global local_list, temp_dir, output_file, lf_cstr
     context.config_plug_downloadBanlist.read()
@@ -101,6 +104,7 @@ def downloads():
     fio = open(file=output_file,mode="w+")
     fio.write(json.dumps(summary_dict, sort_keys=True, indent=4, separators=(',', ':')))
     fio.close()
+    callEvent("event_reload_ban_list")
 
 
 @initRegister

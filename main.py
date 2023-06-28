@@ -4,11 +4,12 @@ import signal
 import sys
 from threading import Thread
 import traceback
-from schedule import run_pending
 import schedule
 import websockets
 import json
 import time
+
+# import apscheduler.schedulers.background as adv_background_schedulers
 
 from module import register
 from module import context
@@ -37,7 +38,7 @@ def atexit_fun():
 def scheduleRunner():
     global flag_exit
     while not flag_exit:
-        run_pending()
+        schedule.run_pending()
         time.sleep(1)
 
 scheduleRunnerThread = Thread(target=scheduleRunner)

@@ -1,7 +1,7 @@
 import time
 from module import configIO, context, tools
 import config
-from module.register import routeRegister, initRegister
+from module.register import routeRegister, initRegister, eventRegister
 import pyjson5
 from module.configIO import pyBool2Json
 
@@ -103,4 +103,8 @@ async def kickCheck(info: dict):
 
 @routeRegister("event_reload_ban_list")
 async def reloadBanList(info: dict):
+    loadBanList()
+
+@eventRegister("event_reload_ban_list")
+async def event_reloadBanList():
     loadBanList()
