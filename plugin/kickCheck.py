@@ -1,5 +1,5 @@
 import time
-from module import configIO, context, tools
+from module import configIO, context, log, tools
 import config
 from module.register import routeRegister, initRegister, eventRegister
 import pyjson5
@@ -98,6 +98,7 @@ async def kickCheck(info: dict):
     time.sleep(0.5)
     if (flag_fined and ("ban" in i["tag"])):
         message = f"kick uuid {info['uuid']} 执行人: {info['source']}\n原因: {info['reason']}"
+        log.info(message)
         await context.context.send(message)
 
 

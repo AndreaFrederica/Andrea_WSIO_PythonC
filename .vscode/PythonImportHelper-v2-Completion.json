@@ -66,6 +66,14 @@
         "documentation": {}
     },
     {
+        "label": "log",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
         "label": "configIO",
         "importPath": "module",
         "description": "module",
@@ -82,7 +90,31 @@
         "documentation": {}
     },
     {
+        "label": "log",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
         "label": "tools",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "log",
         "importPath": "module",
         "description": "module",
         "isExtraImport": true,
@@ -289,6 +321,14 @@
         "importPath": "wget",
         "description": "wget",
         "detail": "wget",
+        "documentation": {}
+    },
+    {
+        "label": "error",
+        "importPath": "module.log",
+        "description": "module.log",
+        "isExtraImport": true,
+        "detail": "module.log",
         "documentation": {}
     },
     {
@@ -690,7 +730,7 @@
         "kind": 2,
         "importPath": "plugin.test",
         "description": "plugin.test",
-        "peekOfCode": "def init():\n    print(\"plugin \\\"test\\\" loaded\")\n@timerBasicRegister(time_sec= 10, type=\"cycle\", cycles=-1)\ndef timerFunc():\n    print(\"test\")\n@timerBasicRegister(time_sec=5,type=\"normal\")\ndef test():\n    print(\"只会执行一次\")",
+        "peekOfCode": "def init():\n    log.info(\"plugin \\\"test\\\" loaded\")\n@timerBasicRegister(time_sec= 10, type=\"cycle\", cycles=-1)\ndef timerFunc():\n    log.success(\"test\")\n@timerBasicRegister(time_sec=5,type=\"normal\")\ndef test():\n    log.success(\"只会执行一次\")",
         "detail": "plugin.test",
         "documentation": {}
     },
@@ -699,7 +739,7 @@
         "kind": 2,
         "importPath": "plugin.test",
         "description": "plugin.test",
-        "peekOfCode": "def timerFunc():\n    print(\"test\")\n@timerBasicRegister(time_sec=5,type=\"normal\")\ndef test():\n    print(\"只会执行一次\")",
+        "peekOfCode": "def timerFunc():\n    log.success(\"test\")\n@timerBasicRegister(time_sec=5,type=\"normal\")\ndef test():\n    log.success(\"只会执行一次\")",
         "detail": "plugin.test",
         "documentation": {}
     },
@@ -708,7 +748,7 @@
         "kind": 2,
         "importPath": "plugin.test",
         "description": "plugin.test",
-        "peekOfCode": "def test():\n    print(\"只会执行一次\")",
+        "peekOfCode": "def test():\n    log.success(\"只会执行一次\")",
         "detail": "plugin.test",
         "documentation": {}
     },
@@ -735,7 +775,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def term_sig_handler(signum, frame):\n    global flag_exit\n    flag_exit = True\n    schedule.run_all()\n    print ('catched singal: %d' % signum)\n    sys.exit()\n@atexit.register\ndef atexit_fun():\n    print ('i am exit, stack track:')\n    exc_type, exc_value, exc_tb = sys.exc_info()",
+        "peekOfCode": "def term_sig_handler(signum, frame):\n    global flag_exit\n    flag_exit = True\n    schedule.run_all()\n    log.info('catched singal: %d' % signum)\n    sys.exit()\n@atexit.register\ndef atexit_fun():\n    print ('i am exit, stack track:')\n    exc_type, exc_value, exc_tb = sys.exc_info()",
         "detail": "main",
         "documentation": {}
     },
@@ -762,7 +802,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "flag_exit = False\nserver = \"ws://localhost:23080\"\ndef term_sig_handler(signum, frame):\n    global flag_exit\n    flag_exit = True\n    schedule.run_all()\n    print ('catched singal: %d' % signum)\n    sys.exit()\n@atexit.register\ndef atexit_fun():",
+        "peekOfCode": "flag_exit = False\nserver = \"ws://localhost:23080\"\ndef term_sig_handler(signum, frame):\n    global flag_exit\n    flag_exit = True\n    schedule.run_all()\n    log.info('catched singal: %d' % signum)\n    sys.exit()\n@atexit.register\ndef atexit_fun():",
         "detail": "main",
         "documentation": {}
     },
@@ -771,7 +811,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "server = \"ws://localhost:23080\"\ndef term_sig_handler(signum, frame):\n    global flag_exit\n    flag_exit = True\n    schedule.run_all()\n    print ('catched singal: %d' % signum)\n    sys.exit()\n@atexit.register\ndef atexit_fun():\n    print ('i am exit, stack track:')",
+        "peekOfCode": "server = \"ws://localhost:23080\"\ndef term_sig_handler(signum, frame):\n    global flag_exit\n    flag_exit = True\n    schedule.run_all()\n    log.info('catched singal: %d' % signum)\n    sys.exit()\n@atexit.register\ndef atexit_fun():\n    print ('i am exit, stack track:')",
         "detail": "main",
         "documentation": {}
     },
@@ -780,7 +820,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "scheduleRunnerThread = Thread(target=scheduleRunner)\nasync def main():\n    signal.signal(signal.SIGTERM, term_sig_handler)\n    signal.signal(signal.SIGINT, term_sig_handler)\n    async with websockets.connect(server) as websocket:\n        context.context = websocket\n        scheduleRunnerThread.start()\n        while True:\n            command = await websocket.recv()\n            print(command)",
+        "peekOfCode": "scheduleRunnerThread = Thread(target=scheduleRunner)\nasync def main():\n    signal.signal(signal.SIGTERM, term_sig_handler)\n    signal.signal(signal.SIGINT, term_sig_handler)\n    async with websockets.connect(server) as websocket:\n        context.context = websocket\n        scheduleRunnerThread.start()\n        while True:\n            command = await websocket.recv()\n            log.info(command)",
         "detail": "main",
         "documentation": {}
     },

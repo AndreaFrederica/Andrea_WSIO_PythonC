@@ -1,3 +1,4 @@
+from module import log
 import asyncio
 import atexit
 import signal
@@ -24,7 +25,7 @@ def term_sig_handler(signum, frame):
     global flag_exit
     flag_exit = True
     schedule.run_all()
-    print ('catched singal: %d' % signum)
+    log.info('catched singal: %d' % signum)
     sys.exit()
  
 @atexit.register
@@ -52,7 +53,7 @@ async def main():
         scheduleRunnerThread.start()
         while True:
             command = await websocket.recv()
-            print(command)
+            log.info(command)
             await register.taskRoute(command)
 
 

@@ -6,8 +6,10 @@ import wget
 import os
 import module
 from module import tools, context, configIO
+from module import log
 
 from module.register import initRegister, timerBasicRegister, callEvent
+from module.log import error
 
 #! Plugin Default Config
 list_dir:str = "banlist"
@@ -82,7 +84,7 @@ def downloads():
                 fio.close()
                 json_objs.append(json2dict)
             except:
-                print(f"DOWNLOAD ERROR  {url}")
+                log.error(f"DOWNLOAD ERROR  {url}")
     try:
         fio = open(file=local_list,mode="r")
         json2dict = pyjson5.decode_io(fio)
@@ -92,7 +94,7 @@ def downloads():
         fio = open(file=local_list,mode="w+")
         fio.write(lf_cstr)
         fio.close()
-        print(f"ERROR IN LOCAL LIST")
+        log.error(f"ERROR IN LOCAL LIST")
     summary_dict:dict = {
         "type":"banlist",
         "content":[]

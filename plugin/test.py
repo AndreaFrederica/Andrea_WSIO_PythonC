@@ -1,15 +1,16 @@
 import module
+from module import log
 
 from module.register import initRegister, timerBasicRegister
 
 @initRegister
 def init():
-    print("plugin \"test\" loaded")
+    log.info("plugin \"test\" loaded")
 
 @timerBasicRegister(time_sec= 10, type="cycle", cycles=-1)
 def timerFunc():
-    print("test")
+    log.success("test")
 
 @timerBasicRegister(time_sec=5,type="normal")
 def test():
-    print("只会执行一次")
+    log.success("只会执行一次")
