@@ -38,6 +38,7 @@ def loadBanList():
     fp = open(file=file, mode="r", encoding=config.encode)
     context.ban_list = pyjson5.decode_io(fp=fp)
     fp.close()
+    log.success("load banlist success")
 
 # * 使用 @initRegister 注册插件的初始化函数
 
@@ -65,6 +66,7 @@ def init():
     enable_uuid = context.config_plug_kickCheck["enable_uuid"]
     enable_full_search = context.config_plug_kickCheck["enable_full_search"]
     # ? End
+    log.info("Plugin kickCheck Loaded")
 
 # * 使用 @routeRegister("<route>") 注册路由函数
 

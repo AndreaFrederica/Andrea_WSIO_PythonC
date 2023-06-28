@@ -7,6 +7,6 @@ modules:list = [
     #* 插件
     "plugin.downloadBanlist",
     "plugin.kickCheck",
-    "plugin.test"
+    #"plugin.test"
 ]
 encode:str = "utf-8"

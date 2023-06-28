@@ -62,9 +62,10 @@ lf_cstr=(
 )
 # ? End
 
-#@timerBasicRegister(type="clock",cycles=-1,clock="23:00")
-@timerBasicRegister(time_sec=10,cycles=-1)
+@timerBasicRegister(type="clock",cycles=-1,clock="23:59")
+#@timerBasicRegister(time_sec=10,cycles=-1)
 def downloads():
+    log.info("Start banlist download")
     global local_list, temp_dir, output_file, lf_cstr
     context.config_plug_downloadBanlist.read()
     json_objs:list = list()
@@ -106,6 +107,7 @@ def downloads():
     fio = open(file=output_file,mode="w+")
     fio.write(json.dumps(summary_dict, sort_keys=True, indent=4, separators=(',', ':')))
     fio.close()
+    log.success("Download banlist success")
     callEvent("event_reload_ban_list")
 
 
@@ -127,6 +129,7 @@ def init():
     path = temp_dir
     if(not os.path.exists(path)):
         os.mkdir(path)
+    log.info("Plugin downloadBanlist Loaded")
     downloads()
 
 

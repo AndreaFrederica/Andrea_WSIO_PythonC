@@ -720,7 +720,7 @@
         "kind": 2,
         "importPath": "plugin.downloadBanlist",
         "description": "plugin.downloadBanlist",
-        "peekOfCode": "def downloads():\n    global local_list, temp_dir, output_file, lf_cstr\n    context.config_plug_downloadBanlist.read()\n    json_objs:list = list()\n    if(context.config_plug_downloadBanlist[\"urls\"]):\n        for url in context.config_plug_downloadBanlist[\"urls\"]:\n            try:\n                file_name = wget.filename_from_url(url)\n                file_all_path = f\"{temp_dir}/{file_name}\"\n                response = requests.get(url)",
+        "peekOfCode": "def downloads():\n    log.info(\"Start banlist download\")\n    global local_list, temp_dir, output_file, lf_cstr\n    context.config_plug_downloadBanlist.read()\n    json_objs:list = list()\n    if(context.config_plug_downloadBanlist[\"urls\"]):\n        for url in context.config_plug_downloadBanlist[\"urls\"]:\n            try:\n                file_name = wget.filename_from_url(url)\n                file_all_path = f\"{temp_dir}/{file_name}\"",
         "detail": "plugin.downloadBanlist",
         "documentation": {}
     },
@@ -792,7 +792,7 @@
         "kind": 2,
         "importPath": "plugin.kickCheck",
         "description": "plugin.kickCheck",
-        "peekOfCode": "def loadBanList():\n    file = \"./banlist/banlist.json5\"\n    fp = open(file=file, mode=\"r\", encoding=config.encode)\n    context.ban_list = pyjson5.decode_io(fp=fp)\n    fp.close()\n# * 使用 @initRegister 注册插件的初始化函数\n@initRegister\ndef init():\n    global enable_ip, enable_name, enable_uuid, enable_full_search\n    loadBanList()",
+        "peekOfCode": "def loadBanList():\n    file = \"./banlist/banlist.json5\"\n    fp = open(file=file, mode=\"r\", encoding=config.encode)\n    context.ban_list = pyjson5.decode_io(fp=fp)\n    fp.close()\n    log.success(\"load banlist success\")\n# * 使用 @initRegister 注册插件的初始化函数\n@initRegister\ndef init():\n    global enable_ip, enable_name, enable_uuid, enable_full_search",
         "detail": "plugin.kickCheck",
         "documentation": {}
     },
@@ -846,7 +846,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "modules:list = [\n    #! 模块和插件无本质区别 只是模块本身更嵌入框架罢了\n    #! 此处排序影响加载顺序\n    #* 模块\n    \"module.configIO\",\n    #* 插件\n    \"plugin.downloadBanlist\",\n    \"plugin.kickCheck\",\n    \"plugin.test\"\n]",
+        "peekOfCode": "modules:list = [\n    #! 模块和插件无本质区别 只是模块本身更嵌入框架罢了\n    #! 此处排序影响加载顺序\n    #* 模块\n    \"module.configIO\",\n    #* 插件\n    \"plugin.downloadBanlist\",\n    \"plugin.kickCheck\",\n    #\"plugin.test\"\n]",
         "detail": "config",
         "documentation": {}
     },
@@ -864,7 +864,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def term_sig_handler(signum, frame):\n    global flag_exit\n    flag_exit = True\n    schedule.run_all()\n    log.info('catched singal: %d' % signum)\n    sys.exit()\n@atexit.register\ndef atexit_fun():\n    print ('i am exit, stack track:')\n    exc_type, exc_value, exc_tb = sys.exc_info()",
+        "peekOfCode": "def term_sig_handler(signum, frame):\n    global flag_exit\n    flag_exit = True\n    schedule.run_all()\n    log.info('catched singal: %d' % signum)\n    sys.exit()\n@atexit.register\ndef atexit_fun():\n    log.info('i am exit, stack track:')\n    exc_type, exc_value, exc_tb = sys.exc_info()",
         "detail": "main",
         "documentation": {}
     },
@@ -873,7 +873,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def atexit_fun():\n    print ('i am exit, stack track:')\n    exc_type, exc_value, exc_tb = sys.exc_info()\n    traceback.print_exception(exc_type, exc_value, exc_tb)\ndef scheduleRunner():\n    global flag_exit\n    while not flag_exit:\n        schedule.run_pending()\n        time.sleep(1)\nscheduleRunnerThread = Thread(target=scheduleRunner)",
+        "peekOfCode": "def atexit_fun():\n    log.info('i am exit, stack track:')\n    exc_type, exc_value, exc_tb = sys.exc_info()\n    traceback.print_exception(exc_type, exc_value, exc_tb)\ndef scheduleRunner():\n    global flag_exit\n    while not flag_exit:\n        schedule.run_pending()\n        time.sleep(1)\nscheduleRunnerThread = Thread(target=scheduleRunner)",
         "detail": "main",
         "documentation": {}
     },
@@ -900,7 +900,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "server = \"ws://localhost:23080\"\ndef term_sig_handler(signum, frame):\n    global flag_exit\n    flag_exit = True\n    schedule.run_all()\n    log.info('catched singal: %d' % signum)\n    sys.exit()\n@atexit.register\ndef atexit_fun():\n    print ('i am exit, stack track:')",
+        "peekOfCode": "server = \"ws://localhost:23080\"\ndef term_sig_handler(signum, frame):\n    global flag_exit\n    flag_exit = True\n    schedule.run_all()\n    log.info('catched singal: %d' % signum)\n    sys.exit()\n@atexit.register\ndef atexit_fun():\n    log.info('i am exit, stack track:')",
         "detail": "main",
         "documentation": {}
     },

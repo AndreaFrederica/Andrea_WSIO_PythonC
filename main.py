@@ -30,7 +30,7 @@ def term_sig_handler(signum, frame):
  
 @atexit.register
 def atexit_fun():
-    print ('i am exit, stack track:')
+    log.info('i am exit, stack track:')
  
     exc_type, exc_value, exc_tb = sys.exc_info()
     traceback.print_exception(exc_type, exc_value, exc_tb)
