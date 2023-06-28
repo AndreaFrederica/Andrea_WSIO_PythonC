@@ -237,6 +237,23 @@
         "documentation": {}
     },
     {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "loguru",
+        "description": "loguru",
+        "isExtraImport": true,
+        "detail": "loguru",
+        "documentation": {}
+    },
+    {
         "label": "asyncio",
         "kind": 6,
         "isExtraImport": true,
@@ -364,15 +381,6 @@
         "importPath": "signal",
         "description": "signal",
         "detail": "signal",
-        "documentation": {}
-    },
-    {
-        "label": "sys",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
         "documentation": {}
     },
     {
@@ -534,6 +542,87 @@
         "description": "module.context",
         "peekOfCode": "timer_info = dict()",
         "detail": "module.context",
+        "documentation": {}
+    },
+    {
+        "label": "trace",
+        "kind": 2,
+        "importPath": "module.log",
+        "description": "module.log",
+        "peekOfCode": "def trace(message: str, *args, **kwargs):\n    logger.trace(message)\ndef debug(message: str, *args, **kwargs):\n    logger.debug(str, *args, **kwargs)\ndef info(message: str, *args, **kwargs):\n    logger.info(message, *args, **kwargs)\ndef success(message: str, *args, **kwargs):\n    logger.success(message, *args, **kwargs)\ndef warning(message: str, *args, **kwargs):\n    logger.warning(message, *args, **kwargs)",
+        "detail": "module.log",
+        "documentation": {}
+    },
+    {
+        "label": "debug",
+        "kind": 2,
+        "importPath": "module.log",
+        "description": "module.log",
+        "peekOfCode": "def debug(message: str, *args, **kwargs):\n    logger.debug(str, *args, **kwargs)\ndef info(message: str, *args, **kwargs):\n    logger.info(message, *args, **kwargs)\ndef success(message: str, *args, **kwargs):\n    logger.success(message, *args, **kwargs)\ndef warning(message: str, *args, **kwargs):\n    logger.warning(message, *args, **kwargs)\ndef error(message: str, *args, **kwargs):\n    logger.error(message, *args, **kwargs)",
+        "detail": "module.log",
+        "documentation": {}
+    },
+    {
+        "label": "info",
+        "kind": 2,
+        "importPath": "module.log",
+        "description": "module.log",
+        "peekOfCode": "def info(message: str, *args, **kwargs):\n    logger.info(message, *args, **kwargs)\ndef success(message: str, *args, **kwargs):\n    logger.success(message, *args, **kwargs)\ndef warning(message: str, *args, **kwargs):\n    logger.warning(message, *args, **kwargs)\ndef error(message: str, *args, **kwargs):\n    logger.error(message, *args, **kwargs)\ndef critical(message: str, *args, **kwargs):\n    logger.critical(message, *args, **kwargs)",
+        "detail": "module.log",
+        "documentation": {}
+    },
+    {
+        "label": "success",
+        "kind": 2,
+        "importPath": "module.log",
+        "description": "module.log",
+        "peekOfCode": "def success(message: str, *args, **kwargs):\n    logger.success(message, *args, **kwargs)\ndef warning(message: str, *args, **kwargs):\n    logger.warning(message, *args, **kwargs)\ndef error(message: str, *args, **kwargs):\n    logger.error(message, *args, **kwargs)\ndef critical(message: str, *args, **kwargs):\n    logger.critical(message, *args, **kwargs)",
+        "detail": "module.log",
+        "documentation": {}
+    },
+    {
+        "label": "warning",
+        "kind": 2,
+        "importPath": "module.log",
+        "description": "module.log",
+        "peekOfCode": "def warning(message: str, *args, **kwargs):\n    logger.warning(message, *args, **kwargs)\ndef error(message: str, *args, **kwargs):\n    logger.error(message, *args, **kwargs)\ndef critical(message: str, *args, **kwargs):\n    logger.critical(message, *args, **kwargs)",
+        "detail": "module.log",
+        "documentation": {}
+    },
+    {
+        "label": "error",
+        "kind": 2,
+        "importPath": "module.log",
+        "description": "module.log",
+        "peekOfCode": "def error(message: str, *args, **kwargs):\n    logger.error(message, *args, **kwargs)\ndef critical(message: str, *args, **kwargs):\n    logger.critical(message, *args, **kwargs)",
+        "detail": "module.log",
+        "documentation": {}
+    },
+    {
+        "label": "critical",
+        "kind": 2,
+        "importPath": "module.log",
+        "description": "module.log",
+        "peekOfCode": "def critical(message: str, *args, **kwargs):\n    logger.critical(message, *args, **kwargs)",
+        "detail": "module.log",
+        "documentation": {}
+    },
+    {
+        "label": "log_filename",
+        "kind": 5,
+        "importPath": "module.log",
+        "description": "module.log",
+        "peekOfCode": "log_filename = \"loguru.log\"\nlog_path = \"log\"\nif(not os.path.exists):\n    os.mkdir(log_path)\nlog_fullpath= f\"{log_path}/{log_filename}\"\nlogger.remove(0)\nlogger.add(log_fullpath)\nlogger.add(sys.stderr, format=\"{time} | {level} | {message}\")\nlogger.debug(\"Happy logging with Loguru!\")\ndef trace(message: str, *args, **kwargs):",
+        "detail": "module.log",
+        "documentation": {}
+    },
+    {
+        "label": "log_path",
+        "kind": 5,
+        "importPath": "module.log",
+        "description": "module.log",
+        "peekOfCode": "log_path = \"log\"\nif(not os.path.exists):\n    os.mkdir(log_path)\nlog_fullpath= f\"{log_path}/{log_filename}\"\nlogger.remove(0)\nlogger.add(log_fullpath)\nlogger.add(sys.stderr, format=\"{time} | {level} | {message}\")\nlogger.debug(\"Happy logging with Loguru!\")\ndef trace(message: str, *args, **kwargs):\n    logger.trace(message)",
+        "detail": "module.log",
         "documentation": {}
     },
     {
