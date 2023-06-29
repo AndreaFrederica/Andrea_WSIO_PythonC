@@ -1,5 +1,6 @@
 import asyncio
 import inspect
+import pyjson5
 import re
 
 
@@ -32,7 +33,8 @@ def waitAsync(func, *args, **kwargs):
     else:
         func(*args, **kwargs)
 
-
+def json2SingleLine(json_str: str):
+    return pyjson5.encode(pyjson5.decode(json_str))
 
 #! 此方法被弃用！
 def getObjName(p:object) -> str:

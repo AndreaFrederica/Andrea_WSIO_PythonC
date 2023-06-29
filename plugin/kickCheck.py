@@ -99,7 +99,13 @@ async def kickCheck(info: dict):
                 break
     time.sleep(0.5)
     if (flag_fined and ("ban" in i["tag"])):
-        message = f"kick uuid {info['uuid']} 执行人: {info['source']}\n原因: {info['reason']}"
+        message = (f"""
+{{
+    "type":"event_kickPlayer",
+    "uuid":"{info['uuid']}",
+    "message":\"\u00A7c\u00A7l你被禁止进入服务器\u00A7f\\n执行人: {i['source']}\\n原因: \u00A7c{i['reason']} \"
+}}""")
+        message = tools.json2SingleLine(message)
         log.info(message)
         await context.context.send(message)
 

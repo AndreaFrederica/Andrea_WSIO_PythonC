@@ -702,7 +702,16 @@
         "kind": 2,
         "importPath": "module.tools",
         "description": "module.tools",
-        "peekOfCode": "def waitAsync(func, *args, **kwargs):\n    if(inspect.iscoroutinefunction):\n        loop = asyncio.new_event_loop()\n        loop.run_until_complete(func(*args, **kwargs))\n        loop.close()\n    else:\n        func(*args, **kwargs)\n#! 此方法被弃用！\ndef getObjName(p:object) -> str:\n    for line in inspect.getframeinfo(inspect.currentframe().f_back)[3]:",
+        "peekOfCode": "def waitAsync(func, *args, **kwargs):\n    if(inspect.iscoroutinefunction):\n        loop = asyncio.new_event_loop()\n        loop.run_until_complete(func(*args, **kwargs))\n        loop.close()\n    else:\n        func(*args, **kwargs)\ndef json2SingleLine(json_str: str):\n    return pyjson5.encode(pyjson5.decode(json_str))\n#! 此方法被弃用！",
+        "detail": "module.tools",
+        "documentation": {}
+    },
+    {
+        "label": "json2SingleLine",
+        "kind": 2,
+        "importPath": "module.tools",
+        "description": "module.tools",
+        "peekOfCode": "def json2SingleLine(json_str: str):\n    return pyjson5.encode(pyjson5.decode(json_str))\n#! 此方法被弃用！\ndef getObjName(p:object) -> str:\n    for line in inspect.getframeinfo(inspect.currentframe().f_back)[3]:\n        m = re.search(r'\\bvarname\\s*\\(\\s*([A-Za-z_][A-Za-z0-9_]*)\\s*\\)', line)\n        if m:\n            return m.group(1)",
         "detail": "module.tools",
         "documentation": {}
     },
