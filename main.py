@@ -1,3 +1,4 @@
+import config
 from module import log
 import asyncio
 import atexit
@@ -42,19 +43,33 @@ def scheduleRunner():
         schedule.run_pending()
         time.sleep(1)
 
-scheduleRunnerThread = Thread(target=scheduleRunner)
 
 async def main():
-    
-    signal.signal(signal.SIGTERM, term_sig_handler)
-    signal.signal(signal.SIGINT, term_sig_handler)
     async with websockets.connect(server) as websocket:
         context.context = websocket
-        scheduleRunnerThread.start()
         while True:
             command = await websocket.recv()
             log.info(command)
             await register.taskRoute(command)
 
 
-asyncio.run(main())
+if(__name__ == "__main__"):
+    signal.signal(signal.SIGTERM, term_sig_handler)
+    signal.signal(signal.SIGINT, term_sig_handler)
+    while True:
+        try:
+            log.info("Start the scheduleRunnerThread")
+            flag_exit = False
+            scheduleRunnerThread = Thread(target=scheduleRunner)
+            scheduleRunnerThread.start()
+            log.info("Try to Connect the MinecraftServer")
+            loop = asyncio.new_event_loop()
+            loop.run_until_complete(main())
+        except:
+            loop.close()
+            log.error("MainFunc ERROR")
+            log.info("Stop the scheduleRunnerThread")
+            flag_exit = True
+            log.info(f"Wait {config.error_wait} Sec.")
+            time.sleep(config.error_wait)
+

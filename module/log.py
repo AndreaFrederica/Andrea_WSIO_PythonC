@@ -29,10 +29,10 @@ logger.add(sys.stderr, format="{time} | {level} | {message}")
 logger.debug("Happy logging with Loguru!")
 
 def trace(message: str, *args, **kwargs):
-    logger.trace(message)
+    logger.trace(message, *args, **kwargs)
 
 def debug(message: str, *args, **kwargs):
-    logger.debug(str, *args, **kwargs)
+    logger.debug(message, *args, **kwargs)
 
 def info(message: str, *args, **kwargs):
     logger.info(message, *args, **kwargs)

@@ -349,6 +349,14 @@
         "documentation": {}
     },
     {
+        "label": "error",
+        "importPath": "module.log",
+        "description": "module.log",
+        "isExtraImport": true,
+        "detail": "module.log",
+        "documentation": {}
+    },
+    {
         "label": "time",
         "kind": 6,
         "isExtraImport": true,
@@ -549,7 +557,7 @@
         "kind": 2,
         "importPath": "module.log",
         "description": "module.log",
-        "peekOfCode": "def trace(message: str, *args, **kwargs):\n    logger.trace(message)\ndef debug(message: str, *args, **kwargs):\n    logger.debug(str, *args, **kwargs)\ndef info(message: str, *args, **kwargs):\n    logger.info(message, *args, **kwargs)\ndef success(message: str, *args, **kwargs):\n    logger.success(message, *args, **kwargs)\ndef warning(message: str, *args, **kwargs):\n    logger.warning(message, *args, **kwargs)",
+        "peekOfCode": "def trace(message: str, *args, **kwargs):\n    logger.trace(message, *args, **kwargs)\ndef debug(message: str, *args, **kwargs):\n    logger.debug(message, *args, **kwargs)\ndef info(message: str, *args, **kwargs):\n    logger.info(message, *args, **kwargs)\ndef success(message: str, *args, **kwargs):\n    logger.success(message, *args, **kwargs)\ndef warning(message: str, *args, **kwargs):\n    logger.warning(message, *args, **kwargs)",
         "detail": "module.log",
         "documentation": {}
     },
@@ -558,7 +566,7 @@
         "kind": 2,
         "importPath": "module.log",
         "description": "module.log",
-        "peekOfCode": "def debug(message: str, *args, **kwargs):\n    logger.debug(str, *args, **kwargs)\ndef info(message: str, *args, **kwargs):\n    logger.info(message, *args, **kwargs)\ndef success(message: str, *args, **kwargs):\n    logger.success(message, *args, **kwargs)\ndef warning(message: str, *args, **kwargs):\n    logger.warning(message, *args, **kwargs)\ndef error(message: str, *args, **kwargs):\n    logger.error(message, *args, **kwargs)",
+        "peekOfCode": "def debug(message: str, *args, **kwargs):\n    logger.debug(message, *args, **kwargs)\ndef info(message: str, *args, **kwargs):\n    logger.info(message, *args, **kwargs)\ndef success(message: str, *args, **kwargs):\n    logger.success(message, *args, **kwargs)\ndef warning(message: str, *args, **kwargs):\n    logger.warning(message, *args, **kwargs)\ndef error(message: str, *args, **kwargs):\n    logger.error(message, *args, **kwargs)",
         "detail": "module.log",
         "documentation": {}
     },
@@ -621,7 +629,7 @@
         "kind": 5,
         "importPath": "module.log",
         "description": "module.log",
-        "peekOfCode": "log_path = \"log\"\nif(not os.path.exists):\n    os.mkdir(log_path)\nlog_fullpath= f\"{log_path}/{log_filename}\"\nlogger.remove(0)\nlogger.add(log_fullpath)\nlogger.add(sys.stderr, format=\"{time} | {level} | {message}\")\nlogger.debug(\"Happy logging with Loguru!\")\ndef trace(message: str, *args, **kwargs):\n    logger.trace(message)",
+        "peekOfCode": "log_path = \"log\"\nif(not os.path.exists):\n    os.mkdir(log_path)\nlog_fullpath= f\"{log_path}/{log_filename}\"\nlogger.remove(0)\nlogger.add(log_fullpath)\nlogger.add(sys.stderr, format=\"{time} | {level} | {message}\")\nlogger.debug(\"Happy logging with Loguru!\")\ndef trace(message: str, *args, **kwargs):\n    logger.trace(message, *args, **kwargs)",
         "detail": "module.log",
         "documentation": {}
     },
@@ -864,7 +872,16 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "encode:str = \"utf-8\"",
+        "peekOfCode": "encode:str = \"utf-8\"\n#! 主线程错误等待时间\nerror_wait:int = 10",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "error_wait:int",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "error_wait:int = 10",
         "detail": "config",
         "documentation": {}
     },
@@ -882,7 +899,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def atexit_fun():\n    log.info('i am exit, stack track:')\n    exc_type, exc_value, exc_tb = sys.exc_info()\n    traceback.print_exception(exc_type, exc_value, exc_tb)\ndef scheduleRunner():\n    global flag_exit\n    while not flag_exit:\n        schedule.run_pending()\n        time.sleep(1)\nscheduleRunnerThread = Thread(target=scheduleRunner)",
+        "peekOfCode": "def atexit_fun():\n    log.info('i am exit, stack track:')\n    exc_type, exc_value, exc_tb = sys.exc_info()\n    traceback.print_exception(exc_type, exc_value, exc_tb)\ndef scheduleRunner():\n    global flag_exit\n    while not flag_exit:\n        schedule.run_pending()\n        time.sleep(1)\nasync def main():",
         "detail": "main",
         "documentation": {}
     },
@@ -891,7 +908,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def scheduleRunner():\n    global flag_exit\n    while not flag_exit:\n        schedule.run_pending()\n        time.sleep(1)\nscheduleRunnerThread = Thread(target=scheduleRunner)\nasync def main():\n    signal.signal(signal.SIGTERM, term_sig_handler)\n    signal.signal(signal.SIGINT, term_sig_handler)\n    async with websockets.connect(server) as websocket:",
+        "peekOfCode": "def scheduleRunner():\n    global flag_exit\n    while not flag_exit:\n        schedule.run_pending()\n        time.sleep(1)\nasync def main():\n    async with websockets.connect(server) as websocket:\n        context.context = websocket\n        while True:\n            command = await websocket.recv()",
         "detail": "main",
         "documentation": {}
     },
@@ -910,15 +927,6 @@
         "importPath": "main",
         "description": "main",
         "peekOfCode": "server = \"ws://localhost:23080\"\ndef term_sig_handler(signum, frame):\n    global flag_exit\n    flag_exit = True\n    schedule.run_all()\n    log.info('catched singal: %d' % signum)\n    sys.exit()\n@atexit.register\ndef atexit_fun():\n    log.info('i am exit, stack track:')",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "scheduleRunnerThread",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "scheduleRunnerThread = Thread(target=scheduleRunner)\nasync def main():\n    signal.signal(signal.SIGTERM, term_sig_handler)\n    signal.signal(signal.SIGINT, term_sig_handler)\n    async with websockets.connect(server) as websocket:\n        context.context = websocket\n        scheduleRunnerThread.start()\n        while True:\n            command = await websocket.recv()\n            log.info(command)",
         "detail": "main",
         "documentation": {}
     },
