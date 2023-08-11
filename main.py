@@ -13,63 +13,65 @@ import time
 
 # import apscheduler.schedulers.background as adv_background_schedulers
 
-from module import register
 from module import context
+from module import minecraftServerWsConnect as mcwsc
+from module import goCQWsConnect as cqwsc
 
-flag_exit = False
+context.flag_exit = False
 
-server = "ws://localhost:23080"
+context.main_exit_flag = False
 
 
+def exit():
+    context.flag_exit = True
+    context.main_exit_flag = True
+    sys.exit()
 
 def term_sig_handler(signum, frame):
-    global flag_exit
-    flag_exit = True
-    schedule.run_all()
+    context.flag_exit = True
     log.info('catched singal: %d' % signum)
     sys.exit()
- 
+
 @atexit.register
 def atexit_fun():
     log.info('i am exit, stack track:')
- 
     exc_type, exc_value, exc_tb = sys.exc_info()
     traceback.print_exception(exc_type, exc_value, exc_tb)
 
 
 def scheduleRunner():
-    global flag_exit
-    while not flag_exit:
+    while not context.flag_exit:
         schedule.run_pending()
         time.sleep(1)
 
 
-async def main():
-    async with websockets.connect(server) as websocket:
-        context.context = websocket
-        while True:
-            command = await websocket.recv()
-            log.info(command)
-            await register.taskRoute(command)
 
 
 if(__name__ == "__main__"):
     signal.signal(signal.SIGTERM, term_sig_handler)
     signal.signal(signal.SIGINT, term_sig_handler)
-    while True:
+    while not context.main_exit_flag:
         try:
             log.info("Start the scheduleRunnerThread")
-            flag_exit = False
+            context.flag_exit = False
             scheduleRunnerThread = Thread(target=scheduleRunner)
             scheduleRunnerThread.start()
-            log.info("Try to Connect the MinecraftServer")
-            loop = asyncio.new_event_loop()
-            loop.run_until_complete(main())
-        except:
+            # log.info("Try to Connect the MinecraftServer")
+            scheduleRunnerThread = Thread(target=scheduleRunner)
+            scheduleRunnerThread.start()
+            tasks = list() #? WorkingList
+            tasks += (mcwsc.getWorkList())
+            tasks += (cqwsc.getWorkList())
+            
+            wait_coro = asyncio.wait(tasks)
+            loop = asyncio.get_event_loop()
+            loop.run_until_complete(wait_coro)
             loop.close()
+            
+        except Exception as e:
+            log.error(e)
             log.error("MainFunc ERROR")
             log.info("Stop the scheduleRunnerThread")
-            flag_exit = True
+            context.flag_exit = True
             log.info(f"Wait {config.error_wait} Sec.")
             time.sleep(config.error_wait)
-

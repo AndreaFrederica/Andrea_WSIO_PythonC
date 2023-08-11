@@ -10,24 +10,39 @@ from module import tools
 import config
 
 from module import context
+from module.log import info
 
 
 
-async def taskRoute(command:str):
-    if(command[0] == "{" and command[-1] == "}"):
-        info = json.loads(command)
-        #*  {
-        #*      "type":"<Type of the message>",
-        #*  ...
-        #*  }
-        for route in context.routes.keys():
-            if(route == info["type"]):
-                module_name:str = context.route2module[route]
-                func_name:str = context.routes[route]
-                module = context.modules[module_name]
-                func = getattr(module, func_name)
-                await func(info)
+async def taskRoute(command:object,session: object):
+    #! command = String / Dict
+    if(type(command) is str):
+        info:dict = dict()
+        command = command.strip()
+        #? 移除空白字符
+        if(command[0] == "{" and command[-1] == "}"):
+            info = json.loads(command)
+            #*  {
+            #*      "type":"<Type of the message>",
+            #*  ...
+            #*  }
+    elif(type(command) is dict):
+        info = command
+    else:
+        info = None
+    if(info != None):
+        if("type" in info):
+            for route in context.routes.keys():
+                if(route == info["type"]):
+                    func_name_list = context.route2funcs[route]
+                    for func_full_name in func_name_list:
+                        func_name = context.func_full_name2func_name[func_full_name]
+                        module_name:str = context.func2module[func_full_name]
+                        module = context.modules[module_name]
+                        func = getattr(module, func_name)
+                        await func(info, session)
 
+# TODO 事件调用机制重做
 def callEvent(event_name:str, *args, **kwargs):
     for event_n in context.events.keys():
         if(event_n == event_name):
@@ -39,11 +54,18 @@ def callEvent(event_name:str, *args, **kwargs):
 
 def routeRegister(route:str):
     def inner_routeRegister(func):
-        if(not(route in context.routes.keys())):
+        func_full_name:str = tools.getModuleNameFromFunc(func) + "." + func.__name__
+        if(not(func_full_name in context.registered_funcs)):
             #! 第一次加载时注册路由
+            context.registered_funcs.append(func_full_name)
             context.route_func_list.append(func.__name__)
             context.routes.update({f"{route}":f"{func.__name__}"})
-            context.route2module.update({f"{route}":f"{tools.getModuleNameFromFunc(func)}"})
+            context.func_full_name2func_name.update({f"{func_full_name}":f"{func.__name__}"})
+            if(not route in context.route2funcs.keys()):
+                context.route2funcs.update({f"{route}":[f"{func_full_name}"]})
+            else:
+                context.route2funcs[route].append(func_full_name)
+            context.func2module.update({f"{func_full_name}":f"{tools.getModuleNameFromFunc(func)}"})
             @wraps(func)
             def wrap(*args, **kwargs):
                 return func(*args, **kwargs)
@@ -55,6 +77,7 @@ def routeRegister(route:str):
             return wrap
     return inner_routeRegister
 
+# TODO 事件注册机制重做
 def eventRegister(event:str):
     def inner_eventRegister(func):
         if(not(event in context.events.keys())):

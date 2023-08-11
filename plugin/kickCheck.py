@@ -38,7 +38,7 @@ def loadBanList():
     fp = open(file=file, mode="r", encoding=config.encode)
     context.ban_list = pyjson5.decode_io(fp=fp)
     fp.close()
-    log.success("load banlist success")
+    log.success("[kickCheck] load banlist success")
 
 # * 使用 @initRegister 注册插件的初始化函数
 
@@ -66,13 +66,13 @@ def init():
     enable_uuid = context.config_plug_kickCheck["enable_uuid"]
     enable_full_search = context.config_plug_kickCheck["enable_full_search"]
     # ? End
-    log.info("Plugin kickCheck Loaded")
+    log.info("[kickCheck] Plugin kickCheck Loaded")
 
 # * 使用 @routeRegister("<route>") 注册路由函数
 
 
 @routeRegister("event_login")
-async def kickCheck(info: dict):
+async def kickCheck(info: dict, session: object):
     global enable_ip, enable_name, enable_uuid, enable_full_search
     flag_fined: bool = False
     for i in context.ban_list["content"]:
@@ -106,8 +106,8 @@ async def kickCheck(info: dict):
     "message":\"\u00A7c\u00A7l你被禁止进入服务器\u00A7f\\n执行人: {i['source']}\\n原因: \u00A7c{i['reason']} \"
 }}""")
         message = tools.json2SingleLine(message)
-        log.info(message)
-        await context.context.send(message)
+        log.info(f"[kickCheck] {message}")
+        await session.send(message)
 
 
 @routeRegister("event_reload_ban_list")

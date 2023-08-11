@@ -26,87 +26,7 @@
         "documentation": {}
     },
     {
-        "label": "tools",
-        "importPath": "module",
-        "description": "module",
-        "isExtraImport": true,
-        "detail": "module",
-        "documentation": {}
-    },
-    {
-        "label": "context",
-        "importPath": "module",
-        "description": "module",
-        "isExtraImport": true,
-        "detail": "module",
-        "documentation": {}
-    },
-    {
-        "label": "tools",
-        "importPath": "module",
-        "description": "module",
-        "isExtraImport": true,
-        "detail": "module",
-        "documentation": {}
-    },
-    {
-        "label": "context",
-        "importPath": "module",
-        "description": "module",
-        "isExtraImport": true,
-        "detail": "module",
-        "documentation": {}
-    },
-    {
         "label": "configIO",
-        "importPath": "module",
-        "description": "module",
-        "isExtraImport": true,
-        "detail": "module",
-        "documentation": {}
-    },
-    {
-        "label": "log",
-        "importPath": "module",
-        "description": "module",
-        "isExtraImport": true,
-        "detail": "module",
-        "documentation": {}
-    },
-    {
-        "label": "configIO",
-        "importPath": "module",
-        "description": "module",
-        "isExtraImport": true,
-        "detail": "module",
-        "documentation": {}
-    },
-    {
-        "label": "context",
-        "importPath": "module",
-        "description": "module",
-        "isExtraImport": true,
-        "detail": "module",
-        "documentation": {}
-    },
-    {
-        "label": "log",
-        "importPath": "module",
-        "description": "module",
-        "isExtraImport": true,
-        "detail": "module",
-        "documentation": {}
-    },
-    {
-        "label": "tools",
-        "importPath": "module",
-        "description": "module",
-        "isExtraImport": true,
-        "detail": "module",
-        "documentation": {}
-    },
-    {
-        "label": "log",
         "importPath": "module",
         "description": "module",
         "isExtraImport": true,
@@ -138,6 +58,198 @@
         "documentation": {}
     },
     {
+        "label": "configIO",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "context",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "tools",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "context",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "configIO",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "context",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "context",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "tools",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "context",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "configIO",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "configIO",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "context",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "tools",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "context",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "minecraftServerWsConnect",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "goCQWsConnect",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -157,6 +269,70 @@
     },
     {
         "label": "initRegister",
+        "importPath": "module.register",
+        "description": "module.register",
+        "isExtraImport": true,
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
+        "label": "eventRegister",
+        "importPath": "module.register",
+        "description": "module.register",
+        "isExtraImport": true,
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
+        "label": "initRegister",
+        "importPath": "module.register",
+        "description": "module.register",
+        "isExtraImport": true,
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
+        "label": "eventRegister",
+        "importPath": "module.register",
+        "description": "module.register",
+        "isExtraImport": true,
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
+        "label": "initRegister",
+        "importPath": "module.register",
+        "description": "module.register",
+        "isExtraImport": true,
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
+        "label": "initRegister",
+        "importPath": "module.register",
+        "description": "module.register",
+        "isExtraImport": true,
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
+        "label": "routeRegister",
+        "importPath": "module.register",
+        "description": "module.register",
+        "isExtraImport": true,
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
+        "label": "initRegister",
+        "importPath": "module.register",
+        "description": "module.register",
+        "isExtraImport": true,
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
+        "label": "routeRegister",
         "importPath": "module.register",
         "description": "module.register",
         "isExtraImport": true,
@@ -237,6 +413,81 @@
         "documentation": {}
     },
     {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "websockets",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "websockets",
+        "description": "websockets",
+        "detail": "websockets",
+        "documentation": {}
+    },
+    {
+        "label": "exit",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "term_sig_handler",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "exit",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "term_sig_handler",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "flag_exit",
+        "importPath": "module.context",
+        "description": "module.context",
+        "isExtraImport": true,
+        "detail": "module.context",
+        "documentation": {}
+    },
+    {
+        "label": "flag_exit",
+        "importPath": "module.context",
+        "description": "module.context",
+        "isExtraImport": true,
+        "detail": "module.context",
+        "documentation": {}
+    },
+    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
@@ -251,15 +502,6 @@
         "description": "loguru",
         "isExtraImport": true,
         "detail": "loguru",
-        "documentation": {}
-    },
-    {
-        "label": "asyncio",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "asyncio",
-        "description": "asyncio",
-        "detail": "asyncio",
         "documentation": {}
     },
     {
@@ -305,6 +547,30 @@
         "documentation": {}
     },
     {
+        "label": "info",
+        "importPath": "module.log",
+        "description": "module.log",
+        "isExtraImport": true,
+        "detail": "module.log",
+        "documentation": {}
+    },
+    {
+        "label": "error",
+        "importPath": "module.log",
+        "description": "module.log",
+        "isExtraImport": true,
+        "detail": "module.log",
+        "documentation": {}
+    },
+    {
+        "label": "error",
+        "importPath": "module.log",
+        "description": "module.log",
+        "isExtraImport": true,
+        "detail": "module.log",
+        "documentation": {}
+    },
+    {
         "label": "inspect",
         "kind": 6,
         "isExtraImport": true,
@@ -323,6 +589,22 @@
         "documentation": {}
     },
     {
+        "label": "json2SingleLine",
+        "importPath": "module.tools",
+        "description": "module.tools",
+        "isExtraImport": true,
+        "detail": "module.tools",
+        "documentation": {}
+    },
+    {
+        "label": "json2SingleLine",
+        "importPath": "module.tools",
+        "description": "module.tools",
+        "isExtraImport": true,
+        "detail": "module.tools",
+        "documentation": {}
+    },
+    {
         "label": "requests",
         "kind": 6,
         "isExtraImport": true,
@@ -338,31 +620,6 @@
         "importPath": "wget",
         "description": "wget",
         "detail": "wget",
-        "documentation": {}
-    },
-    {
-        "label": "error",
-        "importPath": "module.log",
-        "description": "module.log",
-        "isExtraImport": true,
-        "detail": "module.log",
-        "documentation": {}
-    },
-    {
-        "label": "error",
-        "importPath": "module.log",
-        "description": "module.log",
-        "isExtraImport": true,
-        "detail": "module.log",
-        "documentation": {}
-    },
-    {
-        "label": "time",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
         "documentation": {}
     },
     {
@@ -406,15 +663,6 @@
         "importPath": "traceback",
         "description": "traceback",
         "detail": "traceback",
-        "documentation": {}
-    },
-    {
-        "label": "websockets",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "websockets",
-        "description": "websockets",
-        "detail": "websockets",
         "documentation": {}
     },
     {
@@ -467,7 +715,7 @@
         "kind": 5,
         "importPath": "module.context",
         "description": "module.context",
-        "peekOfCode": "context = None\nroute_func_list:list = list()\nroutes:dict = dict()\nmodules:dict = dict()\nroute2module:dict = dict()                #! 路由转模块名\nevent_func_list:list = list()\nevents:dict = dict()\nevent2module:dict = dict()\ntimers = list()\ntimer_info = dict()",
+        "peekOfCode": "context = None\nroute_func_list:list = list()\nroutes:dict = dict()\nmodules:dict = dict()\nroute2module:dict = dict()                #! 路由转模块名\nfunc2module:dict = dict()\nroute2funcs:dict = dict()\nregistered_funcs:list = list()\nfunc_full_name2func_name:dict() = dict()\nevent_func_list:list = list()",
         "detail": "module.context",
         "documentation": {}
     },
@@ -476,7 +724,7 @@
         "kind": 5,
         "importPath": "module.context",
         "description": "module.context",
-        "peekOfCode": "route_func_list:list = list()\nroutes:dict = dict()\nmodules:dict = dict()\nroute2module:dict = dict()                #! 路由转模块名\nevent_func_list:list = list()\nevents:dict = dict()\nevent2module:dict = dict()\ntimers = list()\ntimer_info = dict()",
+        "peekOfCode": "route_func_list:list = list()\nroutes:dict = dict()\nmodules:dict = dict()\nroute2module:dict = dict()                #! 路由转模块名\nfunc2module:dict = dict()\nroute2funcs:dict = dict()\nregistered_funcs:list = list()\nfunc_full_name2func_name:dict() = dict()\nevent_func_list:list = list()\nevents:dict = dict()",
         "detail": "module.context",
         "documentation": {}
     },
@@ -485,7 +733,7 @@
         "kind": 5,
         "importPath": "module.context",
         "description": "module.context",
-        "peekOfCode": "routes:dict = dict()\nmodules:dict = dict()\nroute2module:dict = dict()                #! 路由转模块名\nevent_func_list:list = list()\nevents:dict = dict()\nevent2module:dict = dict()\ntimers = list()\ntimer_info = dict()",
+        "peekOfCode": "routes:dict = dict()\nmodules:dict = dict()\nroute2module:dict = dict()                #! 路由转模块名\nfunc2module:dict = dict()\nroute2funcs:dict = dict()\nregistered_funcs:list = list()\nfunc_full_name2func_name:dict() = dict()\nevent_func_list:list = list()\nevents:dict = dict()\nevent2module:dict = dict()",
         "detail": "module.context",
         "documentation": {}
     },
@@ -494,7 +742,7 @@
         "kind": 5,
         "importPath": "module.context",
         "description": "module.context",
-        "peekOfCode": "modules:dict = dict()\nroute2module:dict = dict()                #! 路由转模块名\nevent_func_list:list = list()\nevents:dict = dict()\nevent2module:dict = dict()\ntimers = list()\ntimer_info = dict()",
+        "peekOfCode": "modules:dict = dict()\nroute2module:dict = dict()                #! 路由转模块名\nfunc2module:dict = dict()\nroute2funcs:dict = dict()\nregistered_funcs:list = list()\nfunc_full_name2func_name:dict() = dict()\nevent_func_list:list = list()\nevents:dict = dict()\nevent2module:dict = dict()\ntimers = list()",
         "detail": "module.context",
         "documentation": {}
     },
@@ -503,7 +751,43 @@
         "kind": 5,
         "importPath": "module.context",
         "description": "module.context",
-        "peekOfCode": "route2module:dict = dict()                #! 路由转模块名\nevent_func_list:list = list()\nevents:dict = dict()\nevent2module:dict = dict()\ntimers = list()\ntimer_info = dict()",
+        "peekOfCode": "route2module:dict = dict()                #! 路由转模块名\nfunc2module:dict = dict()\nroute2funcs:dict = dict()\nregistered_funcs:list = list()\nfunc_full_name2func_name:dict() = dict()\nevent_func_list:list = list()\nevents:dict = dict()\nevent2module:dict = dict()\ntimers = list()\ntimer_info = dict()",
+        "detail": "module.context",
+        "documentation": {}
+    },
+    {
+        "label": "func2module:dict",
+        "kind": 5,
+        "importPath": "module.context",
+        "description": "module.context",
+        "peekOfCode": "func2module:dict = dict()\nroute2funcs:dict = dict()\nregistered_funcs:list = list()\nfunc_full_name2func_name:dict() = dict()\nevent_func_list:list = list()\nevents:dict = dict()\nevent2module:dict = dict()\ntimers = list()\ntimer_info = dict()\nflag_exit = False",
+        "detail": "module.context",
+        "documentation": {}
+    },
+    {
+        "label": "route2funcs:dict",
+        "kind": 5,
+        "importPath": "module.context",
+        "description": "module.context",
+        "peekOfCode": "route2funcs:dict = dict()\nregistered_funcs:list = list()\nfunc_full_name2func_name:dict() = dict()\nevent_func_list:list = list()\nevents:dict = dict()\nevent2module:dict = dict()\ntimers = list()\ntimer_info = dict()\nflag_exit = False\nmain_exit_flag = False",
+        "detail": "module.context",
+        "documentation": {}
+    },
+    {
+        "label": "registered_funcs:list",
+        "kind": 5,
+        "importPath": "module.context",
+        "description": "module.context",
+        "peekOfCode": "registered_funcs:list = list()\nfunc_full_name2func_name:dict() = dict()\nevent_func_list:list = list()\nevents:dict = dict()\nevent2module:dict = dict()\ntimers = list()\ntimer_info = dict()\nflag_exit = False\nmain_exit_flag = False\nall_mc_sessions = dict()",
+        "detail": "module.context",
+        "documentation": {}
+    },
+    {
+        "label": "func_full_name2func_name:dict()",
+        "kind": 5,
+        "importPath": "module.context",
+        "description": "module.context",
+        "peekOfCode": "func_full_name2func_name:dict() = dict()\nevent_func_list:list = list()\nevents:dict = dict()\nevent2module:dict = dict()\ntimers = list()\ntimer_info = dict()\nflag_exit = False\nmain_exit_flag = False\nall_mc_sessions = dict()\nall_cq_sessions = dict()",
         "detail": "module.context",
         "documentation": {}
     },
@@ -512,7 +796,7 @@
         "kind": 5,
         "importPath": "module.context",
         "description": "module.context",
-        "peekOfCode": "event_func_list:list = list()\nevents:dict = dict()\nevent2module:dict = dict()\ntimers = list()\ntimer_info = dict()",
+        "peekOfCode": "event_func_list:list = list()\nevents:dict = dict()\nevent2module:dict = dict()\ntimers = list()\ntimer_info = dict()\nflag_exit = False\nmain_exit_flag = False\nall_mc_sessions = dict()\nall_cq_sessions = dict()",
         "detail": "module.context",
         "documentation": {}
     },
@@ -521,7 +805,7 @@
         "kind": 5,
         "importPath": "module.context",
         "description": "module.context",
-        "peekOfCode": "events:dict = dict()\nevent2module:dict = dict()\ntimers = list()\ntimer_info = dict()",
+        "peekOfCode": "events:dict = dict()\nevent2module:dict = dict()\ntimers = list()\ntimer_info = dict()\nflag_exit = False\nmain_exit_flag = False\nall_mc_sessions = dict()\nall_cq_sessions = dict()",
         "detail": "module.context",
         "documentation": {}
     },
@@ -530,7 +814,7 @@
         "kind": 5,
         "importPath": "module.context",
         "description": "module.context",
-        "peekOfCode": "event2module:dict = dict()\ntimers = list()\ntimer_info = dict()",
+        "peekOfCode": "event2module:dict = dict()\ntimers = list()\ntimer_info = dict()\nflag_exit = False\nmain_exit_flag = False\nall_mc_sessions = dict()\nall_cq_sessions = dict()",
         "detail": "module.context",
         "documentation": {}
     },
@@ -539,7 +823,7 @@
         "kind": 5,
         "importPath": "module.context",
         "description": "module.context",
-        "peekOfCode": "timers = list()\ntimer_info = dict()",
+        "peekOfCode": "timers = list()\ntimer_info = dict()\nflag_exit = False\nmain_exit_flag = False\nall_mc_sessions = dict()\nall_cq_sessions = dict()",
         "detail": "module.context",
         "documentation": {}
     },
@@ -548,17 +832,98 @@
         "kind": 5,
         "importPath": "module.context",
         "description": "module.context",
-        "peekOfCode": "timer_info = dict()",
+        "peekOfCode": "timer_info = dict()\nflag_exit = False\nmain_exit_flag = False\nall_mc_sessions = dict()\nall_cq_sessions = dict()",
         "detail": "module.context",
         "documentation": {}
     },
     {
-        "label": "trace",
+        "label": "flag_exit",
+        "kind": 5,
+        "importPath": "module.context",
+        "description": "module.context",
+        "peekOfCode": "flag_exit = False\nmain_exit_flag = False\nall_mc_sessions = dict()\nall_cq_sessions = dict()",
+        "detail": "module.context",
+        "documentation": {}
+    },
+    {
+        "label": "main_exit_flag",
+        "kind": 5,
+        "importPath": "module.context",
+        "description": "module.context",
+        "peekOfCode": "main_exit_flag = False\nall_mc_sessions = dict()\nall_cq_sessions = dict()",
+        "detail": "module.context",
+        "documentation": {}
+    },
+    {
+        "label": "all_mc_sessions",
+        "kind": 5,
+        "importPath": "module.context",
+        "description": "module.context",
+        "peekOfCode": "all_mc_sessions = dict()\nall_cq_sessions = dict()",
+        "detail": "module.context",
+        "documentation": {}
+    },
+    {
+        "label": "all_cq_sessions",
+        "kind": 5,
+        "importPath": "module.context",
+        "description": "module.context",
+        "peekOfCode": "all_cq_sessions = dict()",
+        "detail": "module.context",
+        "documentation": {}
+    },
+    {
+        "label": "init",
         "kind": 2,
-        "importPath": "module.log",
-        "description": "module.log",
-        "peekOfCode": "def trace(message: str, *args, **kwargs):\n    logger.trace(message, *args, **kwargs)\ndef debug(message: str, *args, **kwargs):\n    logger.debug(message, *args, **kwargs)\ndef info(message: str, *args, **kwargs):\n    logger.info(message, *args, **kwargs)\ndef success(message: str, *args, **kwargs):\n    logger.success(message, *args, **kwargs)\ndef warning(message: str, *args, **kwargs):\n    logger.warning(message, *args, **kwargs)",
-        "detail": "module.log",
+        "importPath": "module.goCQWsConnect",
+        "description": "module.goCQWsConnect",
+        "peekOfCode": "def init():\n    global server_url_list, enable\n    context.config_module_cqwsc: configIO.Config = configIO.Config(\n        \"cqWSClient\")\n    if(not context.config_module_cqwsc.defaultCheck(\"urls\",\"enable\")):\n        context.config_module_cqwsc.setRAW_STR(cstr)\n    context.config_module_cqwsc.read()\n    server_url_list = context.config_module_cqwsc[\"urls\"]\n    enable = context.config_module_cqwsc[\"enable\"]\n    log.info(\"[CQWSC] Module CQWSC Loaded\")",
+        "detail": "module.goCQWsConnect",
+        "documentation": {}
+    },
+    {
+        "label": "getWorkList",
+        "kind": 2,
+        "importPath": "module.goCQWsConnect",
+        "description": "module.goCQWsConnect",
+        "peekOfCode": "def getWorkList():\n    global server_url, tasks, enable\n    if enable:\n        for server_url in server_url_list:\n            tasks.append(wsClient(server_url))\n        return tasks\n    else:\n        log.warning(\"[CQWSC] Please Check Setting for CQWSC\")\n        exit()",
+        "detail": "module.goCQWsConnect",
+        "documentation": {}
+    },
+    {
+        "label": "server_url_list",
+        "kind": 5,
+        "importPath": "module.goCQWsConnect",
+        "description": "module.goCQWsConnect",
+        "peekOfCode": "server_url_list = list()\ntasks = list()\nenable = False\n# * 自定义默认配置文件字符串\ncstr = (\n    f\"\"\"{{\n        //* ModuleName: goCQWsConnect\n        enable : {configIO.p2J(enable)},\n        urls : [\n            \"ws://127.0.0.1:8080\"",
+        "detail": "module.goCQWsConnect",
+        "documentation": {}
+    },
+    {
+        "label": "tasks",
+        "kind": 5,
+        "importPath": "module.goCQWsConnect",
+        "description": "module.goCQWsConnect",
+        "peekOfCode": "tasks = list()\nenable = False\n# * 自定义默认配置文件字符串\ncstr = (\n    f\"\"\"{{\n        //* ModuleName: goCQWsConnect\n        enable : {configIO.p2J(enable)},\n        urls : [\n            \"ws://127.0.0.1:8080\"\n        ]",
+        "detail": "module.goCQWsConnect",
+        "documentation": {}
+    },
+    {
+        "label": "enable",
+        "kind": 5,
+        "importPath": "module.goCQWsConnect",
+        "description": "module.goCQWsConnect",
+        "peekOfCode": "enable = False\n# * 自定义默认配置文件字符串\ncstr = (\n    f\"\"\"{{\n        //* ModuleName: goCQWsConnect\n        enable : {configIO.p2J(enable)},\n        urls : [\n            \"ws://127.0.0.1:8080\"\n        ]\n}}",
+        "detail": "module.goCQWsConnect",
+        "documentation": {}
+    },
+    {
+        "label": "cstr",
+        "kind": 5,
+        "importPath": "module.goCQWsConnect",
+        "description": "module.goCQWsConnect",
+        "peekOfCode": "cstr = (\n    f\"\"\"{{\n        //* ModuleName: goCQWsConnect\n        enable : {configIO.p2J(enable)},\n        urls : [\n            \"ws://127.0.0.1:8080\"\n        ]\n}}\n\"\"\"\n)",
+        "detail": "module.goCQWsConnect",
         "documentation": {}
     },
     {
@@ -575,7 +940,7 @@
         "kind": 2,
         "importPath": "module.log",
         "description": "module.log",
-        "peekOfCode": "def info(message: str, *args, **kwargs):\n    logger.info(message, *args, **kwargs)\ndef success(message: str, *args, **kwargs):\n    logger.success(message, *args, **kwargs)\ndef warning(message: str, *args, **kwargs):\n    logger.warning(message, *args, **kwargs)\ndef error(message: str, *args, **kwargs):\n    logger.error(message, *args, **kwargs)\ndef critical(message: str, *args, **kwargs):\n    logger.critical(message, *args, **kwargs)",
+        "peekOfCode": "def info(message: str, *args, **kwargs):\n    logger.info(message, *args, **kwargs)\ndef success(message: str, *args, **kwargs):\n    logger.success(message, *args, **kwargs)\ndef warning(message: str, *args, **kwargs):\n    logger.warning(message, *args, **kwargs)\ndef error(message: str, *args, **kwargs):\n    logger.error(message, *args, **kwargs)\ndef critical(message: str, *args, **kwargs):\n    logger.critical(message, *args, **kwargs) \"\"\"",
         "detail": "module.log",
         "documentation": {}
     },
@@ -584,7 +949,7 @@
         "kind": 2,
         "importPath": "module.log",
         "description": "module.log",
-        "peekOfCode": "def success(message: str, *args, **kwargs):\n    logger.success(message, *args, **kwargs)\ndef warning(message: str, *args, **kwargs):\n    logger.warning(message, *args, **kwargs)\ndef error(message: str, *args, **kwargs):\n    logger.error(message, *args, **kwargs)\ndef critical(message: str, *args, **kwargs):\n    logger.critical(message, *args, **kwargs)",
+        "peekOfCode": "def success(message: str, *args, **kwargs):\n    logger.success(message, *args, **kwargs)\ndef warning(message: str, *args, **kwargs):\n    logger.warning(message, *args, **kwargs)\ndef error(message: str, *args, **kwargs):\n    logger.error(message, *args, **kwargs)\ndef critical(message: str, *args, **kwargs):\n    logger.critical(message, *args, **kwargs) \"\"\"",
         "detail": "module.log",
         "documentation": {}
     },
@@ -593,7 +958,7 @@
         "kind": 2,
         "importPath": "module.log",
         "description": "module.log",
-        "peekOfCode": "def warning(message: str, *args, **kwargs):\n    logger.warning(message, *args, **kwargs)\ndef error(message: str, *args, **kwargs):\n    logger.error(message, *args, **kwargs)\ndef critical(message: str, *args, **kwargs):\n    logger.critical(message, *args, **kwargs)",
+        "peekOfCode": "def warning(message: str, *args, **kwargs):\n    logger.warning(message, *args, **kwargs)\ndef error(message: str, *args, **kwargs):\n    logger.error(message, *args, **kwargs)\ndef critical(message: str, *args, **kwargs):\n    logger.critical(message, *args, **kwargs) \"\"\"",
         "detail": "module.log",
         "documentation": {}
     },
@@ -602,7 +967,7 @@
         "kind": 2,
         "importPath": "module.log",
         "description": "module.log",
-        "peekOfCode": "def error(message: str, *args, **kwargs):\n    logger.error(message, *args, **kwargs)\ndef critical(message: str, *args, **kwargs):\n    logger.critical(message, *args, **kwargs)",
+        "peekOfCode": "def error(message: str, *args, **kwargs):\n    logger.error(message, *args, **kwargs)\ndef critical(message: str, *args, **kwargs):\n    logger.critical(message, *args, **kwargs) \"\"\"",
         "detail": "module.log",
         "documentation": {}
     },
@@ -611,7 +976,7 @@
         "kind": 2,
         "importPath": "module.log",
         "description": "module.log",
-        "peekOfCode": "def critical(message: str, *args, **kwargs):\n    logger.critical(message, *args, **kwargs)",
+        "peekOfCode": "def critical(message: str, *args, **kwargs):\n    logger.critical(message, *args, **kwargs) \"\"\"",
         "detail": "module.log",
         "documentation": {}
     },
@@ -620,7 +985,7 @@
         "kind": 5,
         "importPath": "module.log",
         "description": "module.log",
-        "peekOfCode": "log_filename = \"loguru.log\"\nlog_path = \"log\"\nif(not os.path.exists):\n    os.mkdir(log_path)\nlog_fullpath= f\"{log_path}/{log_filename}\"\nlogger.remove(0)\nlogger.add(log_fullpath)\nlogger.add(sys.stderr, format=\"{time} | {level} | {message}\")\nlogger.debug(\"Happy logging with Loguru!\")\ndef trace(message: str, *args, **kwargs):",
+        "peekOfCode": "log_filename = \"loguru.log\"\nlog_path = \"log\"\nif(not os.path.exists):\n    os.mkdir(log_path)\nlog_fullpath= f\"{log_path}/{log_filename}\"\nlogger.remove(0)\nlogger.add(log_fullpath)\n#logger.add(sys.stderr, format=\"{time} | {level} | {message}\")\nlogger.add(sys.stdout, colorize=True, format=\"<green>{time}</green> <level> | {level} | {message}</level>\")\nlogger.debug(\"Happy logging with Loguru!\")",
         "detail": "module.log",
         "documentation": {}
     },
@@ -629,8 +994,125 @@
         "kind": 5,
         "importPath": "module.log",
         "description": "module.log",
-        "peekOfCode": "log_path = \"log\"\nif(not os.path.exists):\n    os.mkdir(log_path)\nlog_fullpath= f\"{log_path}/{log_filename}\"\nlogger.remove(0)\nlogger.add(log_fullpath)\nlogger.add(sys.stderr, format=\"{time} | {level} | {message}\")\nlogger.debug(\"Happy logging with Loguru!\")\ndef trace(message: str, *args, **kwargs):\n    logger.trace(message, *args, **kwargs)",
+        "peekOfCode": "log_path = \"log\"\nif(not os.path.exists):\n    os.mkdir(log_path)\nlog_fullpath= f\"{log_path}/{log_filename}\"\nlogger.remove(0)\nlogger.add(log_fullpath)\n#logger.add(sys.stderr, format=\"{time} | {level} | {message}\")\nlogger.add(sys.stdout, colorize=True, format=\"<green>{time}</green> <level> | {level} | {message}</level>\")\nlogger.debug(\"Happy logging with Loguru!\")\ntrace = logger.trace",
         "detail": "module.log",
+        "documentation": {}
+    },
+    {
+        "label": "trace",
+        "kind": 5,
+        "importPath": "module.log",
+        "description": "module.log",
+        "peekOfCode": "trace = logger.trace\ndebug = logger.debug\ninfo = logger.info\nsuccess = logger.success\nwarning = logger.warning\nerror = logger.error\ncritical = logger.critical\n\"\"\" def trace(message: str, *args, **kwargs):\n    logger.trace(message, *args, **kwargs)\ndef debug(message: str, *args, **kwargs):",
+        "detail": "module.log",
+        "documentation": {}
+    },
+    {
+        "label": "debug",
+        "kind": 5,
+        "importPath": "module.log",
+        "description": "module.log",
+        "peekOfCode": "debug = logger.debug\ninfo = logger.info\nsuccess = logger.success\nwarning = logger.warning\nerror = logger.error\ncritical = logger.critical\n\"\"\" def trace(message: str, *args, **kwargs):\n    logger.trace(message, *args, **kwargs)\ndef debug(message: str, *args, **kwargs):\n    logger.debug(message, *args, **kwargs)",
+        "detail": "module.log",
+        "documentation": {}
+    },
+    {
+        "label": "info",
+        "kind": 5,
+        "importPath": "module.log",
+        "description": "module.log",
+        "peekOfCode": "info = logger.info\nsuccess = logger.success\nwarning = logger.warning\nerror = logger.error\ncritical = logger.critical\n\"\"\" def trace(message: str, *args, **kwargs):\n    logger.trace(message, *args, **kwargs)\ndef debug(message: str, *args, **kwargs):\n    logger.debug(message, *args, **kwargs)\ndef info(message: str, *args, **kwargs):",
+        "detail": "module.log",
+        "documentation": {}
+    },
+    {
+        "label": "success",
+        "kind": 5,
+        "importPath": "module.log",
+        "description": "module.log",
+        "peekOfCode": "success = logger.success\nwarning = logger.warning\nerror = logger.error\ncritical = logger.critical\n\"\"\" def trace(message: str, *args, **kwargs):\n    logger.trace(message, *args, **kwargs)\ndef debug(message: str, *args, **kwargs):\n    logger.debug(message, *args, **kwargs)\ndef info(message: str, *args, **kwargs):\n    logger.info(message, *args, **kwargs)",
+        "detail": "module.log",
+        "documentation": {}
+    },
+    {
+        "label": "warning",
+        "kind": 5,
+        "importPath": "module.log",
+        "description": "module.log",
+        "peekOfCode": "warning = logger.warning\nerror = logger.error\ncritical = logger.critical\n\"\"\" def trace(message: str, *args, **kwargs):\n    logger.trace(message, *args, **kwargs)\ndef debug(message: str, *args, **kwargs):\n    logger.debug(message, *args, **kwargs)\ndef info(message: str, *args, **kwargs):\n    logger.info(message, *args, **kwargs)\ndef success(message: str, *args, **kwargs):",
+        "detail": "module.log",
+        "documentation": {}
+    },
+    {
+        "label": "error",
+        "kind": 5,
+        "importPath": "module.log",
+        "description": "module.log",
+        "peekOfCode": "error = logger.error\ncritical = logger.critical\n\"\"\" def trace(message: str, *args, **kwargs):\n    logger.trace(message, *args, **kwargs)\ndef debug(message: str, *args, **kwargs):\n    logger.debug(message, *args, **kwargs)\ndef info(message: str, *args, **kwargs):\n    logger.info(message, *args, **kwargs)\ndef success(message: str, *args, **kwargs):\n    logger.success(message, *args, **kwargs)",
+        "detail": "module.log",
+        "documentation": {}
+    },
+    {
+        "label": "critical",
+        "kind": 5,
+        "importPath": "module.log",
+        "description": "module.log",
+        "peekOfCode": "critical = logger.critical\n\"\"\" def trace(message: str, *args, **kwargs):\n    logger.trace(message, *args, **kwargs)\ndef debug(message: str, *args, **kwargs):\n    logger.debug(message, *args, **kwargs)\ndef info(message: str, *args, **kwargs):\n    logger.info(message, *args, **kwargs)\ndef success(message: str, *args, **kwargs):\n    logger.success(message, *args, **kwargs)\ndef warning(message: str, *args, **kwargs):",
+        "detail": "module.log",
+        "documentation": {}
+    },
+    {
+        "label": "init",
+        "kind": 2,
+        "importPath": "module.minecraftServerWsConnect",
+        "description": "module.minecraftServerWsConnect",
+        "peekOfCode": "def init():\n    global server_url_list, enable\n    context.config_module_mcwsc: configIO.Config = configIO.Config(\n        \"mcWSClient\")\n    if(not context.config_module_mcwsc.defaultCheck(\"urls\",\"enable\")):\n        context.config_module_mcwsc.setRAW_STR(cstr)\n    context.config_module_mcwsc.read()\n    server_url_list = context.config_module_mcwsc[\"urls\"]\n    enable = context.config_module_mcwsc[\"enable\"]\n    log.info(\"[MCWSC] Module MCWSC Loaded\")",
+        "detail": "module.minecraftServerWsConnect",
+        "documentation": {}
+    },
+    {
+        "label": "getWorkList",
+        "kind": 2,
+        "importPath": "module.minecraftServerWsConnect",
+        "description": "module.minecraftServerWsConnect",
+        "peekOfCode": "def getWorkList():\n    global server_url, tasks, enable\n    if enable:\n        for server_url in server_url_list:\n            tasks.append(wsClient(server_url))\n        return tasks\n    else:\n        log.warning(\"[MCWSC] Please Check Setting for MCWSC\")\n        exit()",
+        "detail": "module.minecraftServerWsConnect",
+        "documentation": {}
+    },
+    {
+        "label": "server_url_list",
+        "kind": 5,
+        "importPath": "module.minecraftServerWsConnect",
+        "description": "module.minecraftServerWsConnect",
+        "peekOfCode": "server_url_list = list()\ntasks = list()\nenable = False\n# * 自定义默认配置文件字符串\ncstr = (\n    f\"\"\"{{\n        //* ModuleName: minecraftServerWsConnect\n        enable : {configIO.p2J(enable)},\n        urls : [\n            \"ws://localhost:23080\"",
+        "detail": "module.minecraftServerWsConnect",
+        "documentation": {}
+    },
+    {
+        "label": "tasks",
+        "kind": 5,
+        "importPath": "module.minecraftServerWsConnect",
+        "description": "module.minecraftServerWsConnect",
+        "peekOfCode": "tasks = list()\nenable = False\n# * 自定义默认配置文件字符串\ncstr = (\n    f\"\"\"{{\n        //* ModuleName: minecraftServerWsConnect\n        enable : {configIO.p2J(enable)},\n        urls : [\n            \"ws://localhost:23080\"\n        ]",
+        "detail": "module.minecraftServerWsConnect",
+        "documentation": {}
+    },
+    {
+        "label": "enable",
+        "kind": 5,
+        "importPath": "module.minecraftServerWsConnect",
+        "description": "module.minecraftServerWsConnect",
+        "peekOfCode": "enable = False\n# * 自定义默认配置文件字符串\ncstr = (\n    f\"\"\"{{\n        //* ModuleName: minecraftServerWsConnect\n        enable : {configIO.p2J(enable)},\n        urls : [\n            \"ws://localhost:23080\"\n        ]\n}}",
+        "detail": "module.minecraftServerWsConnect",
+        "documentation": {}
+    },
+    {
+        "label": "cstr",
+        "kind": 5,
+        "importPath": "module.minecraftServerWsConnect",
+        "description": "module.minecraftServerWsConnect",
+        "peekOfCode": "cstr = (\n    f\"\"\"{{\n        //* ModuleName: minecraftServerWsConnect\n        enable : {configIO.p2J(enable)},\n        urls : [\n            \"ws://localhost:23080\"\n        ]\n}}\n\"\"\"\n)",
+        "detail": "module.minecraftServerWsConnect",
         "documentation": {}
     },
     {
@@ -647,7 +1129,7 @@
         "kind": 2,
         "importPath": "module.register",
         "description": "module.register",
-        "peekOfCode": "def routeRegister(route:str):\n    def inner_routeRegister(func):\n        if(not(route in context.routes.keys())):\n            #! 第一次加载时注册路由\n            context.route_func_list.append(func.__name__)\n            context.routes.update({f\"{route}\":f\"{func.__name__}\"})\n            context.route2module.update({f\"{route}\":f\"{tools.getModuleNameFromFunc(func)}\"})\n            @wraps(func)\n            def wrap(*args, **kwargs):\n                return func(*args, **kwargs)",
+        "peekOfCode": "def routeRegister(route:str):\n    def inner_routeRegister(func):\n        func_full_name:str = tools.getModuleNameFromFunc(func) + \".\" + func.__name__\n        if(not(func_full_name in context.registered_funcs)):\n            #! 第一次加载时注册路由\n            context.registered_funcs.append(func_full_name)\n            context.route_func_list.append(func.__name__)\n            context.routes.update({f\"{route}\":f\"{func.__name__}\"})\n            context.func_full_name2func_name.update({f\"{func_full_name}\":f\"{func.__name__}\"})\n            if(not route in context.route2funcs.keys()):",
         "detail": "module.register",
         "documentation": {}
     },
@@ -733,11 +1215,47 @@
         "documentation": {}
     },
     {
+        "label": "init",
+        "kind": 2,
+        "importPath": "plugin.andreaCQGroupsChat",
+        "description": "plugin.andreaCQGroupsChat",
+        "peekOfCode": "def init():\n    global cq_namespace, group_id\n    context.config_plug_cqGroupChat:configIO.Config = configIO.Config(\"cqGroupChat\")\n    config_obj:configIO.Config = context.config_plug_cqGroupChat\n    group_id =  config_obj.setDefault(\"group_id\", group_id)\n    cq_namespace = config_obj.setDefault(\"namespace\", cq_namespace)\n    config_obj.commit()\n    log.info(\"[andreaCQGroupsChat] Plugin andreaCQGroupsChat Loaded\")\n#! 监听CQ-HTTP消息\n@routeRegister(\"cq_event_message\")",
+        "detail": "plugin.andreaCQGroupsChat",
+        "documentation": {}
+    },
+    {
+        "label": "group_id:int",
+        "kind": 5,
+        "importPath": "plugin.andreaCQGroupsChat",
+        "description": "plugin.andreaCQGroupsChat",
+        "peekOfCode": "group_id:int = 111111111\ncq_namespace:str = \"测试群消息\"\n@initRegister\ndef init():\n    global cq_namespace, group_id\n    context.config_plug_cqGroupChat:configIO.Config = configIO.Config(\"cqGroupChat\")\n    config_obj:configIO.Config = context.config_plug_cqGroupChat\n    group_id =  config_obj.setDefault(\"group_id\", group_id)\n    cq_namespace = config_obj.setDefault(\"namespace\", cq_namespace)\n    config_obj.commit()",
+        "detail": "plugin.andreaCQGroupsChat",
+        "documentation": {}
+    },
+    {
+        "label": "cq_namespace:str",
+        "kind": 5,
+        "importPath": "plugin.andreaCQGroupsChat",
+        "description": "plugin.andreaCQGroupsChat",
+        "peekOfCode": "cq_namespace:str = \"测试群消息\"\n@initRegister\ndef init():\n    global cq_namespace, group_id\n    context.config_plug_cqGroupChat:configIO.Config = configIO.Config(\"cqGroupChat\")\n    config_obj:configIO.Config = context.config_plug_cqGroupChat\n    group_id =  config_obj.setDefault(\"group_id\", group_id)\n    cq_namespace = config_obj.setDefault(\"namespace\", cq_namespace)\n    config_obj.commit()\n    log.info(\"[andreaCQGroupsChat] Plugin andreaCQGroupsChat Loaded\")",
+        "detail": "plugin.andreaCQGroupsChat",
+        "documentation": {}
+    },
+    {
+        "label": "init",
+        "kind": 2,
+        "importPath": "plugin.andreaGroupsChat",
+        "description": "plugin.andreaGroupsChat",
+        "peekOfCode": "def init():\n    log.info(\"[andreaGroupsChat] Plugin andreaGroupsChat Loaded\")\n@routeRegister(\"event_chat\")\nasync def groupsChat(info:dict, session: object):\n    raw_message = info[\"message\"]\n    player_name = info[\"name\"]\n    namespace = info[\"namespace\"]\n    message = f\"[{namespace}][{player_name}] {raw_message}\"\n    json_message = (f\"\"\"\n        {{",
+        "detail": "plugin.andreaGroupsChat",
+        "documentation": {}
+    },
+    {
         "label": "downloads",
         "kind": 2,
         "importPath": "plugin.downloadBanlist",
         "description": "plugin.downloadBanlist",
-        "peekOfCode": "def downloads():\n    log.info(\"Start banlist download\")\n    global local_list, temp_dir, output_file, lf_cstr\n    context.config_plug_downloadBanlist.read()\n    json_objs:list = list()\n    if(context.config_plug_downloadBanlist[\"urls\"]):\n        for url in context.config_plug_downloadBanlist[\"urls\"]:\n            try:\n                file_name = wget.filename_from_url(url)\n                file_all_path = f\"{temp_dir}/{file_name}\"",
+        "peekOfCode": "def downloads():\n    log.info(\"[downloadBanlist] Start banlist download\")\n    global local_list, temp_dir, output_file, lf_cstr\n    context.config_plug_downloadBanlist.read()\n    json_objs:list = list()\n    if(context.config_plug_downloadBanlist[\"urls\"]):\n        for url in context.config_plug_downloadBanlist[\"urls\"]:\n            try:\n                file_name = wget.filename_from_url(url)\n                file_all_path = f\"{temp_dir}/{file_name}\"",
         "detail": "plugin.downloadBanlist",
         "documentation": {}
     },
@@ -809,7 +1327,7 @@
         "kind": 2,
         "importPath": "plugin.kickCheck",
         "description": "plugin.kickCheck",
-        "peekOfCode": "def loadBanList():\n    file = \"./banlist/banlist.json5\"\n    fp = open(file=file, mode=\"r\", encoding=config.encode)\n    context.ban_list = pyjson5.decode_io(fp=fp)\n    fp.close()\n    log.success(\"load banlist success\")\n# * 使用 @initRegister 注册插件的初始化函数\n@initRegister\ndef init():\n    global enable_ip, enable_name, enable_uuid, enable_full_search",
+        "peekOfCode": "def loadBanList():\n    file = \"./banlist/banlist.json5\"\n    fp = open(file=file, mode=\"r\", encoding=config.encode)\n    context.ban_list = pyjson5.decode_io(fp=fp)\n    fp.close()\n    log.success(\"[kickCheck] load banlist success\")\n# * 使用 @initRegister 注册插件的初始化函数\n@initRegister\ndef init():\n    global enable_ip, enable_name, enable_uuid, enable_full_search",
         "detail": "plugin.kickCheck",
         "documentation": {}
     },
@@ -863,7 +1381,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "modules:list = [\n    #! 模块和插件无本质区别 只是模块本身更嵌入框架罢了\n    #! 此处排序影响加载顺序\n    #* 模块\n    \"module.configIO\",\n    #* 插件\n    \"plugin.downloadBanlist\",\n    \"plugin.kickCheck\",\n    #\"plugin.test\"\n]",
+        "peekOfCode": "modules:list = [\n    #! 模块和插件无本质区别 只是模块本身更嵌入框架罢了\n    #! 此处排序影响加载顺序\n    #* 模块\n    \"module.configIO\",\n    \"module.minecraftServerWsConnect\",\n    \"module.goCQWsConnect\",\n    #* 插件\n    \"plugin.downloadBanlist\",\n    \"plugin.kickCheck\",",
         "detail": "config",
         "documentation": {}
     },
@@ -872,7 +1390,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "encode:str = \"utf-8\"\n#! 主线程错误等待时间\nerror_wait:int = 10",
+        "peekOfCode": "encode:str = \"utf-8\"\n#! 错误等待时间\nerror_wait:int = 0.2\n# // 服务器URL（Minecraft）(弃用)\nminecraft_server = \"ws://localhost:23080\"",
         "detail": "config",
         "documentation": {}
     },
@@ -881,8 +1399,26 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "error_wait:int = 10",
+        "peekOfCode": "error_wait:int = 0.2\n# // 服务器URL（Minecraft）(弃用)\nminecraft_server = \"ws://localhost:23080\"",
         "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "minecraft_server",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "minecraft_server = \"ws://localhost:23080\"",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "exit",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def exit():\n    context.flag_exit = True\n    context.main_exit_flag = True\n    sys.exit()\ndef term_sig_handler(signum, frame):\n    context.flag_exit = True\n    log.info('catched singal: %d' % signum)\n    sys.exit()\n@atexit.register\ndef atexit_fun():",
+        "detail": "main",
         "documentation": {}
     },
     {
@@ -890,7 +1426,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def term_sig_handler(signum, frame):\n    global flag_exit\n    flag_exit = True\n    schedule.run_all()\n    log.info('catched singal: %d' % signum)\n    sys.exit()\n@atexit.register\ndef atexit_fun():\n    log.info('i am exit, stack track:')\n    exc_type, exc_value, exc_tb = sys.exc_info()",
+        "peekOfCode": "def term_sig_handler(signum, frame):\n    context.flag_exit = True\n    log.info('catched singal: %d' % signum)\n    sys.exit()\n@atexit.register\ndef atexit_fun():\n    log.info('i am exit, stack track:')\n    exc_type, exc_value, exc_tb = sys.exc_info()\n    traceback.print_exception(exc_type, exc_value, exc_tb)\ndef scheduleRunner():",
         "detail": "main",
         "documentation": {}
     },
@@ -899,7 +1435,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def atexit_fun():\n    log.info('i am exit, stack track:')\n    exc_type, exc_value, exc_tb = sys.exc_info()\n    traceback.print_exception(exc_type, exc_value, exc_tb)\ndef scheduleRunner():\n    global flag_exit\n    while not flag_exit:\n        schedule.run_pending()\n        time.sleep(1)\nasync def main():",
+        "peekOfCode": "def atexit_fun():\n    log.info('i am exit, stack track:')\n    exc_type, exc_value, exc_tb = sys.exc_info()\n    traceback.print_exception(exc_type, exc_value, exc_tb)\ndef scheduleRunner():\n    while not context.flag_exit:\n        schedule.run_pending()\n        time.sleep(1)\nif(__name__ == \"__main__\"):\n    signal.signal(signal.SIGTERM, term_sig_handler)",
         "detail": "main",
         "documentation": {}
     },
@@ -908,25 +1444,25 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def scheduleRunner():\n    global flag_exit\n    while not flag_exit:\n        schedule.run_pending()\n        time.sleep(1)\nasync def main():\n    async with websockets.connect(server) as websocket:\n        context.context = websocket\n        while True:\n            command = await websocket.recv()",
+        "peekOfCode": "def scheduleRunner():\n    while not context.flag_exit:\n        schedule.run_pending()\n        time.sleep(1)\nif(__name__ == \"__main__\"):\n    signal.signal(signal.SIGTERM, term_sig_handler)\n    signal.signal(signal.SIGINT, term_sig_handler)\n    while not context.main_exit_flag:\n        try:\n            log.info(\"Start the scheduleRunnerThread\")",
         "detail": "main",
         "documentation": {}
     },
     {
-        "label": "flag_exit",
+        "label": "context.flag_exit",
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "flag_exit = False\nserver = \"ws://localhost:23080\"\ndef term_sig_handler(signum, frame):\n    global flag_exit\n    flag_exit = True\n    schedule.run_all()\n    log.info('catched singal: %d' % signum)\n    sys.exit()\n@atexit.register\ndef atexit_fun():",
+        "peekOfCode": "context.flag_exit = False\ncontext.main_exit_flag = False\ndef exit():\n    context.flag_exit = True\n    context.main_exit_flag = True\n    sys.exit()\ndef term_sig_handler(signum, frame):\n    context.flag_exit = True\n    log.info('catched singal: %d' % signum)\n    sys.exit()",
         "detail": "main",
         "documentation": {}
     },
     {
-        "label": "server",
+        "label": "context.main_exit_flag",
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "server = \"ws://localhost:23080\"\ndef term_sig_handler(signum, frame):\n    global flag_exit\n    flag_exit = True\n    schedule.run_all()\n    log.info('catched singal: %d' % signum)\n    sys.exit()\n@atexit.register\ndef atexit_fun():\n    log.info('i am exit, stack track:')",
+        "peekOfCode": "context.main_exit_flag = False\ndef exit():\n    context.flag_exit = True\n    context.main_exit_flag = True\n    sys.exit()\ndef term_sig_handler(signum, frame):\n    context.flag_exit = True\n    log.info('catched singal: %d' % signum)\n    sys.exit()\n@atexit.register",
         "detail": "main",
         "documentation": {}
     },

@@ -1,0 +1,9 @@
+{
+        //* ModuleName: minecraftServerWsConnect
+        enable : true,
+        urls : [
+            "ws://localhost:23080",
+            "ws://192.168.0.115:23080",
+            "ws://192.168.0.115:23081"
+        ]
+}

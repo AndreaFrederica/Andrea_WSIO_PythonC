@@ -24,11 +24,22 @@ log_fullpath= f"{log_path}/{log_filename}"
 
 logger.remove(0)
 logger.add(log_fullpath)
-logger.add(sys.stderr, format="{time} | {level} | {message}")
+#logger.add(sys.stderr, format="{time} | {level} | {message}")
+logger.add(sys.stdout, colorize=True, format="<green>{time}</green> <level> | {level} | {message}</level>")
 
 logger.debug("Happy logging with Loguru!")
 
-def trace(message: str, *args, **kwargs):
+
+trace = logger.trace
+debug = logger.debug
+info = logger.info
+success = logger.success
+warning = logger.warning
+error = logger.error
+critical = logger.critical
+
+
+""" def trace(message: str, *args, **kwargs):
     logger.trace(message, *args, **kwargs)
 
 def debug(message: str, *args, **kwargs):
@@ -47,4 +58,4 @@ def error(message: str, *args, **kwargs):
     logger.error(message, *args, **kwargs)
 
 def critical(message: str, *args, **kwargs):
-    logger.critical(message, *args, **kwargs)
+    logger.critical(message, *args, **kwargs) """
