@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.mirrors.ustc.edu.cn/simple/"
+verify_ssl = false
+name = "pip_conf_index_global"
+
+[packages]
+loguru = "*"
+pyjson5 = "*"
+schedule = "*"
+websockets = "*"
+requests = "*"
+wget = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
