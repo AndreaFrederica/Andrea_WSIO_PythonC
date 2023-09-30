@@ -1,0 +1,107 @@
+import time
+from module import configIO, context, log, tools
+import config
+from module.register import routeRegister, initRegister, eventRegister
+import pyjson5
+from module.configIO import pyBool2Json
+
+#! Plug Default Config
+enable_ip: bool = False
+enable_name: bool = True
+enable_uuid: bool = True
+# ? FullSearch
+enable_full_search: bool = False  # ! 功能还没做好 开了会炸！
+# * End Config
+
+
+# * 自定义默认配置文件字符串
+cstr = (
+    f"""{{
+        //* PlugName: advanceKickCheck
+        enable_ip : {configIO.p2J(enable_ip)},                 //! 启用ip识别
+        enable_name : {configIO.p2J(enable_name)},                //* 启用名字识别
+        enable_uuid : {configIO.p2J(enable_uuid)},                //* 启用UUID识别
+        //? FullSearch
+        enable_full_search : {configIO.p2J(enable_full_search)}         //! 启用全索检  切勿启用 可能会导致bug
+}}
+"""
+)
+# ? End
+
+
+def loadBanList():
+    file = "./banlist/banlist.json5"
+    fp = open(file=file, mode="r", encoding=config.encode)
+    context.ban_list = pyjson5.decode_io(fp=fp)
+    fp.close()
+    log.success("[advanceKickCheck] load banlist success")
+
+# * 使用 @initRegister 注册插件的初始化函数
+
+
+@initRegister
+def init():
+    global enable_ip, enable_name, enable_uuid, enable_full_search
+    loadBanList()
+    context.config_plug_advanceKickCheck: configIO.Config = configIO.Config(
+        "advanceKickCheck")
+    if (not context.config_plug_advanceKickCheck.defaultCheck("enable_ip", "enable_name", "enable_uuid", "enable_full_search")):
+        context.config_plug_advanceKickCheck.setRAW_STR(cstr)
+    context.config_plug_advanceKickCheck.read()
+    enable_ip = context.config_plug_advanceKickCheck["enable_ip"]
+    enable_name = context.config_plug_advanceKickCheck["enable_name"]
+    enable_uuid = context.config_plug_advanceKickCheck["enable_uuid"]
+    enable_full_search = context.config_plug_advanceKickCheck["enable_full_search"]
+    # ? End
+    log.info("[advanceKickCheck] Plugin advanceKickCheck Loaded")
+
+# * 使用 @routeRegister("<route>") 注册路由函数
+
+
+@routeRegister("event_login")
+async def advanceKickCheck(info: dict, session: object):
+    global enable_ip, enable_name, enable_uuid, enable_full_search
+    flag_fined: bool = False
+    for i in context.ban_list["content"]:
+        find = "name"
+        if (i[find] == info[find] and enable_name):
+            flag_fined = True
+            if (enable_full_search):
+                pass
+            else:
+                break
+        find = "uuid"
+        if (i[find] == info[find] and enable_uuid):
+            flag_fined = True
+            if (enable_full_search):
+                pass
+            else:
+                break
+        find = "ip"
+        if (i[find] == info[find] and enable_ip):
+            flag_fined = True
+            if (enable_full_search):
+                pass
+            else:
+                break
+    time.sleep(0.5)
+    if (flag_fined and ("ban" in i["tag"])):
+        message = (f"""
+{{
+    "type":"event_advance_check_return",
+    "result":false,
+    "uuid":"{info['uuid']}",
+    "message":\"\u00A7c\u00A7l你被禁止进入服务器\u00A7f\\n执行人: {i['source']}\\n原因: \u00A7c{i['reason']} \"
+}}""")
+        message = tools.json2SingleLine(message)
+        log.info(f"[advanceKickCheck] {message}")
+        await session.send(message)
+
+
+@routeRegister("event_reload_ban_list")
+async def reloadBanList(info: dict):
+    loadBanList()
+
+@eventRegister("event_reload_ban_list")
+async def event_reloadBanList():
+    loadBanList()

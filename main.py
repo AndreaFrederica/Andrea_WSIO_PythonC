@@ -61,7 +61,8 @@ if(__name__ == "__main__"):
             scheduleRunnerThread.start()
             tasks = list() #? WorkingList
             tasks += (mcwsc.getWorkList())
-            tasks += (cqwsc.getWorkList())
+            if(config.cqwsc_enable):
+                tasks += (cqwsc.getWorkList())
             
             wait_coro = asyncio.wait(tasks)
             loop = asyncio.get_event_loop()

@@ -130,6 +130,38 @@
         "documentation": {}
     },
     {
+        "label": "tools",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "configIO",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "context",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
         "label": "context",
         "importPath": "module",
         "description": "module",
@@ -203,6 +235,22 @@
     },
     {
         "label": "tools",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "tools",
+        "importPath": "module",
+        "description": "module",
+        "isExtraImport": true,
+        "detail": "module",
+        "documentation": {}
+    },
+    {
+        "label": "log",
         "importPath": "module",
         "description": "module",
         "isExtraImport": true,
@@ -308,6 +356,30 @@
         "documentation": {}
     },
     {
+        "label": "routeRegister",
+        "importPath": "module.register",
+        "description": "module.register",
+        "isExtraImport": true,
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
+        "label": "initRegister",
+        "importPath": "module.register",
+        "description": "module.register",
+        "isExtraImport": true,
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
+        "label": "eventRegister",
+        "importPath": "module.register",
+        "description": "module.register",
+        "isExtraImport": true,
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
         "label": "initRegister",
         "importPath": "module.register",
         "description": "module.register",
@@ -381,6 +453,22 @@
     },
     {
         "label": "eventRegister",
+        "importPath": "module.register",
+        "description": "module.register",
+        "isExtraImport": true,
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
+        "label": "initRegister",
+        "importPath": "module.register",
+        "description": "module.register",
+        "isExtraImport": true,
+        "detail": "module.register",
+        "documentation": {}
+    },
+    {
+        "label": "routeRegister",
         "importPath": "module.register",
         "description": "module.register",
         "isExtraImport": true,
@@ -589,6 +677,30 @@
         "documentation": {}
     },
     {
+        "label": "pyBool2Json",
+        "importPath": "module.configIO",
+        "description": "module.configIO",
+        "isExtraImport": true,
+        "detail": "module.configIO",
+        "documentation": {}
+    },
+    {
+        "label": "pyBool2Json",
+        "importPath": "module.configIO",
+        "description": "module.configIO",
+        "isExtraImport": true,
+        "detail": "module.configIO",
+        "documentation": {}
+    },
+    {
+        "label": "json2SingleLine",
+        "importPath": "module.tools",
+        "description": "module.tools",
+        "isExtraImport": true,
+        "detail": "module.tools",
+        "documentation": {}
+    },
+    {
         "label": "json2SingleLine",
         "importPath": "module.tools",
         "description": "module.tools",
@@ -620,14 +732,6 @@
         "importPath": "wget",
         "description": "wget",
         "detail": "wget",
-        "documentation": {}
-    },
-    {
-        "label": "pyBool2Json",
-        "importPath": "module.configIO",
-        "description": "module.configIO",
-        "isExtraImport": true,
-        "detail": "module.configIO",
         "documentation": {}
     },
     {
@@ -1215,6 +1319,33 @@
         "documentation": {}
     },
     {
+        "label": "loadBanList",
+        "kind": 2,
+        "importPath": "plugin.advanceKickCheck",
+        "description": "plugin.advanceKickCheck",
+        "peekOfCode": "def loadBanList():\n    file = \"./banlist/banlist.json5\"\n    fp = open(file=file, mode=\"r\", encoding=config.encode)\n    context.ban_list = pyjson5.decode_io(fp=fp)\n    fp.close()\n    log.success(\"[advanceKickCheck] load banlist success\")\n# * 使用 @initRegister 注册插件的初始化函数\n@initRegister\ndef init():\n    global enable_ip, enable_name, enable_uuid, enable_full_search",
+        "detail": "plugin.advanceKickCheck",
+        "documentation": {}
+    },
+    {
+        "label": "init",
+        "kind": 2,
+        "importPath": "plugin.advanceKickCheck",
+        "description": "plugin.advanceKickCheck",
+        "peekOfCode": "def init():\n    global enable_ip, enable_name, enable_uuid, enable_full_search\n    loadBanList()\n    context.config_plug_advanceKickCheck: configIO.Config = configIO.Config(\n        \"advanceKickCheck\")\n    if (not context.config_plug_advanceKickCheck.defaultCheck(\"enable_ip\", \"enable_name\", \"enable_uuid\", \"enable_full_search\")):\n        context.config_plug_advanceKickCheck.setRAW_STR(cstr)\n    context.config_plug_advanceKickCheck.read()\n    enable_ip = context.config_plug_advanceKickCheck[\"enable_ip\"]\n    enable_name = context.config_plug_advanceKickCheck[\"enable_name\"]",
+        "detail": "plugin.advanceKickCheck",
+        "documentation": {}
+    },
+    {
+        "label": "cstr",
+        "kind": 5,
+        "importPath": "plugin.advanceKickCheck",
+        "description": "plugin.advanceKickCheck",
+        "peekOfCode": "cstr = (\n    f\"\"\"{{\n        //* PlugName: advanceKickCheck\n        enable_ip : {configIO.p2J(enable_ip)},                 //! 启用ip识别\n        enable_name : {configIO.p2J(enable_name)},                //* 启用名字识别\n        enable_uuid : {configIO.p2J(enable_uuid)},                //* 启用UUID识别\n        //? FullSearch\n        enable_full_search : {configIO.p2J(enable_full_search)}         //! 启用全索检  切勿启用 可能会导致bug\n}}\n\"\"\"",
+        "detail": "plugin.advanceKickCheck",
+        "documentation": {}
+    },
+    {
         "label": "init",
         "kind": 2,
         "importPath": "plugin.andreaCQGroupsChat",
@@ -1352,6 +1483,15 @@
     {
         "label": "init",
         "kind": 2,
+        "importPath": "plugin.onlyOneName",
+        "description": "plugin.onlyOneName",
+        "peekOfCode": "def init():\n    log.info(\"[onlyOneName] Plugin onlyOneName Loaded\")\n@routeRegister(\"event_login\")\nasync def oneName(info: dict, session: object):\n    flag_error:bool = False\n    reason:str = \"\"\n    uuid:str = info[\"uuid\"]\n    name:str = info[\"name\"]\n    online_players:list = info[\"players\"]\n    for player in online_players:",
+        "detail": "plugin.onlyOneName",
+        "documentation": {}
+    },
+    {
+        "label": "init",
+        "kind": 2,
         "importPath": "plugin.test",
         "description": "plugin.test",
         "peekOfCode": "def init():\n    log.info(\"plugin \\\"test\\\" loaded\")\n@timerBasicRegister(time_sec= 10, type=\"cycle\", cycles=-1)\ndef timerFunc():\n    log.success(\"test\")\n@timerBasicRegister(time_sec=5,type=\"normal\")\ndef test():\n    log.success(\"只会执行一次\")",
@@ -1381,7 +1521,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "modules:list = [\n    #! 模块和插件无本质区别 只是模块本身更嵌入框架罢了\n    #! 此处排序影响加载顺序\n    #* 模块\n    \"module.configIO\",\n    \"module.minecraftServerWsConnect\",\n    \"module.goCQWsConnect\",\n    #* 插件\n    \"plugin.downloadBanlist\",\n    \"plugin.kickCheck\",",
+        "peekOfCode": "modules:list = [\n    #! 模块和插件无本质区别 只是模块本身更嵌入框架罢了\n    #! 此处排序影响加载顺序\n    #* 模块\n    \"module.configIO\",\n    \"module.minecraftServerWsConnect\",\n    \"module.goCQWsConnect\",\n    #* 插件\n    \"plugin.downloadBanlist\",\n    #\"plugin.kickCheck\",",
         "detail": "config",
         "documentation": {}
     },
@@ -1390,7 +1530,7 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "encode:str = \"utf-8\"\n#! 错误等待时间\nerror_wait:int = 0.2\n# // 服务器URL（Minecraft）(弃用)\nminecraft_server = \"ws://localhost:23080\"",
+        "peekOfCode": "encode:str = \"utf-8\"\n#! 错误等待时间\nerror_wait:int = 0.2\n#! 启用群服联动\ncqwsc_enable:bool = False\n# // 服务器URL（Minecraft）(弃用)\nminecraft_server = \"ws://localhost:23080\"",
         "detail": "config",
         "documentation": {}
     },
@@ -1399,7 +1539,16 @@
         "kind": 5,
         "importPath": "config",
         "description": "config",
-        "peekOfCode": "error_wait:int = 0.2\n# // 服务器URL（Minecraft）(弃用)\nminecraft_server = \"ws://localhost:23080\"",
+        "peekOfCode": "error_wait:int = 0.2\n#! 启用群服联动\ncqwsc_enable:bool = False\n# // 服务器URL（Minecraft）(弃用)\nminecraft_server = \"ws://localhost:23080\"",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "cqwsc_enable:bool",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "cqwsc_enable:bool = False\n# // 服务器URL（Minecraft）(弃用)\nminecraft_server = \"ws://localhost:23080\"",
         "detail": "config",
         "documentation": {}
     },
